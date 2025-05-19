@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <title> ForestTypes Display Website </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="WGinfo.css">
+    </head>
+    <body>
+        <div class="noPrint">
+            <h1>Prototyp für Darstellung von Waldgesellschaften
+            </h1>
+            <select id="languageSelect">
+             <option value="de">DE</option>
+             <option value="fr">FR</option>
+            </select>
+            </span>
+            <select id="forestTypeSelect">
+            <option value="">Select a forest type</option>
+            </select>
+            <span>share:
+            <button id="share-mailto">&nbsp;</button>
+            </span>
+            <span>print:
+            <button id="print">&nbsp;</button>
+            </span>
+            <div id="tooltip" style="position: absolute; display: none; background: cornsilk; border: 1px solid black; border-radius: 5px; padding: 5px;"><span class="de"></span><span class="fr"></span></div>
+            <hr />
+        </div>
+        <h2 id="forestType"><span class="de"></span><span class="fr"></span></h2>
+        <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" id="svg8" version="1.1" viewBox="0 0 199.93699 275.56532" height="317mm" width="230mm" sodipodi:docname="template.svg" inkscape:version="1.0 (4035a4f, 2020-05-01)">
+            <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="2048" inkscape:window-height="1055" id="namedview1617" showgrid="false" inkscape:zoom="1.1200123" inkscape:cx="292.95403" inkscape:cy="129.01644" inkscape:window-x="0" inkscape:window-y="23" inkscape:window-maximized="1" inkscape:current-layer="layer26" inkscape:document-rotation="0"/>
+            <g inkscape:groupmode="layer" id="layer26" inkscape:label="Legende" style="display:inline">
+              <rect id="veryFrequent" style="stroke:#231f20;stroke-width:0.0881944" x="10.010406" y="249.25464" width="2.899128" height="2.899128"/>
+              <rect id="lessFrequent" style="stroke:#231f20;stroke-width:0.0881944" x="10.010406" y="253.02971" width="2.899128" height="2.899128"/>
+              <rect id="rare" style="stroke:#231f20;stroke-width:0.0881944" x="10.010406" y="256.75467" width="2.899128" height="2.899128"/>
+              <text y="243.96965" x="9.7348175" style="font-size:2.822px" id="text2940"><tspan class="de" id="tspan2936">Legende</tspan><tspan class="fr" id="tspan2938">Légende</tspan></text>
+              <text y="247.76817" x="9.9570055" style="font-size:2.14667px" id="text2946"><tspan class="de" id="tspan2942">Verbreitung</tspan><tspan class="fr" id="tspan2944">Répartition</tspan></text>
+              <text y="251.35181" x="14.50739" style="font-size:2.14667px" id="text2952"><tspan class="de" id="tspan2948">sehr häufig</tspan><tspan class="fr" id="tspan2950">très fréquente</tspan></text>
+              <text y="255.05595" x="14.569411" style="font-size:2.14667px" id="text2958"><tspan class="de" id="tspan2954">weniger häufig</tspan><tspan class="fr" id="tspan2956">moins fréquente</tspan></text>
+              <text y="258.76004" x="14.50739" style="font-size:2.14667px" id="text2964"><tspan class="de" id="tspan2960">selten</tspan><tspan class="fr" id="tspan2962">rare</tspan></text>
+            </g>
+            <g inkscape:groupmode="layer" id="layer25" inkscape:label="Koerngung" style="display:inline">
+              <rect class="rare" id="KO_S" width="1.681056" height="17.945559" x="59.229843" y="239.10054"/>
+              <rect class="rare" id="KO_sL" width="3.5999889" height="17.945559" x="62.710922" y="239.10054"/>
+              <rect class="rare" id="KO_tL" width="3.5999918" height="17.945559" x="69.910896" y="239.10054"/>
+              <path class="rare" d="m 77.110897,239.13876 v 17.9615 l 17.868723,-0.0544 z" id="T"/>
+              <path class="rare" d="m 62.710894,224.70785 2e-6,14.39243 7.19998,-1e-5 v -7.17698 z" id="lU"/>
+              <path class="rare" d="m 62.710896,239.10028 -2e-6,-14.39243 -3.481071,-3.48854 -4e-6,17.88097 z" id="U"/>
+              <path class="rare" d="m 69.910876,231.92329 7.161616,7.17699 -7.161616,-1e-5 z" id="tU"/>
+              <rect class="rare" id="KO_IS" width="1.8000139" height="17.945559" x="60.910904" y="239.10054"/>
+              <rect class="rare" id="KO_L" width="3.5999928" height="17.945559" x="66.310913" y="239.10054"/>
+              <rect class="rare" id="KO_lT" width="3.6000299" height="17.945559" x="73.510887" y="239.10054"/>
+              <text style="font-size:2.14667px" x="73.056938" y="261.98782" class="de" id="text2030">Ton [%]</text>
+              <text style="font-size:2.14667px" transform="rotate(-90)" x="-246.45663" y="54.018303" class="de" id="text2032">Schluff [%]</text>
+              <text style="font-size:3.175px" x="52.380348" y="217.13472" class="de" id="text2034">Körnung</text>
+              <text style="font-size:3.175px" x="55.600342" y="217.13472" class="fr" id="text2036">Texture</text>
+              <path d="m 59.229824,221.13871 v 35.90713 H 94.97962 L 59.149391,221.13871" style="fill:none;stroke:#231f20;stroke-width:0.109008" id="path2028"/>
+              <path d="M 58.657795,239.10028 H 77.110898" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2032"/>
+              <path d="M 62.710894,257.10027 V 224.70716" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2036"/>
+              <path d="M 60.91088,257.10027 V 239.10014" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2040"/>
+              <path d="M 66.310883,257.10027 V 239.10014" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2044"/>
+              <path d="M 69.910876,257.10027 V 231.91688" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2048"/>
+              <path d="M 73.510868,257.10027 V 239.10014" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2052"/>
+              <path d="M 77.110898,257.10027 V 239.10014" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2056"/>
+              <path d="m 58.657795,221.15321 h 0.60325" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2232"/>
+              <text y="239.10342" x="55.957169" style="font-size:2.14667px" id="text2047">50</text>
+              <text y="221.40541" x="54.780304" style="font-size:2.14667px" id="text2049">100</text>
+              <text y="259.40375" x="60.269562" style="font-size:2.14667px" id="text2051">5</text>
+              <text y="259.40375" x="68.734039" style="font-size:2.14667px" id="text2053">30</text>
+              <text y="259.40375" x="75.881134" style="font-size:2.14667px" id="text2055">50</text>
+              <text y="259.32751" x="93.345604" style="font-size:2.14667px" id="text2057">100</text>
+            </g>
+            <g inkscape:groupmode="layer" id="layer24" inkscape:label="Ausgangsmaterial" style="display:inline">
+              <path d="M 9.9276126,220.36637 H 13.56828 v 3.59834 H 9.9276126 Z" class="rare" id="AM_S"/>
+              <path d="M 9.9276126,225.48906 H 13.56828 v 3.64067 H 9.9276126 Z" class="rare" id="AM_B"/>
+              <text class="de" y="217.13472" x="9.8639364" style="font-size:3.175px" id="text2062">Ausgangsmaterial</text>
+              <text class="fr" y="217.13472" x="9.8639364" style="font-size:3.175px" id="text2064">Matériau parental</text>
+              <text class="de" y="223.12488" x="14.970994" style="font-size:2.54px" id="text2066">sauer</text>
+              <text class="de" y="227.8521" x="14.970994" style="font-size:2.54px" id="text2068">basisch</text>
+              <text class="de" y="232.57933" x="14.970994" style="font-size:2.54px" id="text2070">nicht bestimmt</text>
+              <path id="path2946" style="fill:none;stroke:#231f20;stroke-width:0.0881944" d="M 9.8898656,223.99716 H 13.535824 V 220.3512 H 9.8898656 Z"/>
+              <path id="path2948" style="fill:none;stroke:#231f20;stroke-width:0.0881944" d="m 9.8898656,229.15971 h 3.6459584 v -3.64596 H 9.8898656 Z"/>
+            </g>
+            <g inkscape:groupmode="layer" id="layer23" inkscape:label="Wasserdurchlaessigkeit_Vernaessung_Stauwasser" style="display:inline">
+              <rect class="rare" id="WVS_1" width="5.12431" height="5.92942" x="128.09683" y="228.77287"/>
+              <rect class="rare" id="WVS_2" width="5.1430097" height="5.9294171" x="133.22122" y="228.77287"/>
+              <rect class="rare" id="WVS_3" width="5.1429996" height="5.92942" x="138.36427" y="228.77287"/>
+              <rect class="rare" id="WVS_4" width="5.1430097" height="5.9294171" x="143.50728" y="228.77287"/>
+              <rect class="rare" id="WVS_5" width="5.1429701" height="5.9294147" x="148.65028" y="228.77287"/>
+              <rect class="rare" id="WVS_6" width="5.1430097" height="5.92942" x="153.79324" y="228.77287"/>
+              <rect class="rare" id="WVS_7" width="5.0194902" height="5.92942" x="158.93625" y="228.77287"/>
+              <rect class="rare" id="WVS_8" width="5.12431" height="5.99997" x="128.09683" y="234.70229"/>
+              <rect class="rare" id="WVS_9" width="5.1430106" height="5.9999795" x="133.22122" y="234.70229"/>
+              <rect class="rare" id="WVS_10" width="5.1430011" height="5.9999795" x="138.36427" y="234.70229"/>
+              <rect class="rare" id="WVS_11" width="5.1430082" height="5.9999795" x="143.50728" y="234.70229"/>
+              <rect class="rare" id="WVS_12" width="5.1429644" height="5.99997" x="148.65028" y="234.70229"/>
+              <rect class="rare" id="WVS_13" width="5.1430125" height="5.9999781" x="153.79324" y="234.70229"/>
+              <rect class="rare" id="WVS_14" width="5.0194979" height="5.9999795" x="158.93625" y="234.70229"/>
+              <rect class="rare" id="WVS_15" width="5.1243095" height="6.0000095" x="128.09683" y="240.70226"/>
+              <rect class="rare" id="WVS_16" width="5.1430097" height="5.999999" x="133.22122" y="240.70227"/>
+              <rect class="rare" id="WVS_17" width="5.1430011" height="6" x="138.36427" y="240.70227"/>
+              <rect class="rare" id="WVS_18" width="5.1430159" height="6.0000148" x="143.50728" y="240.70226"/>
+              <rect class="rare" id="WVS_19" width="5.1429625" height="6.0000143" x="148.65028" y="240.70226"/>
+              <rect class="rare" id="WVS_20" width="5.1430025" height="6.0000014" x="153.79324" y="240.70227"/>
+              <rect class="rare" id="WVS_21" width="5.019505" height="6" x="158.93625" y="240.70227"/>
+              <rect class="rare" id="WVS_22" width="5.1243095" height="6.000011" x="128.09683" y="246.70227"/>
+              <rect class="rare" id="WVS_23" width="5.1430092" height="6.00001" x="133.22122" y="246.70227"/>
+              <rect class="rare" id="WVS_24" width="5.1430049" height="6.00001" x="138.36427" y="246.70227"/>
+              <rect class="rare" id="WVS_25" width="5.1430235" height="6.0000062" x="143.50728" y="246.70227"/>
+              <rect class="rare" id="WVS_26" width="5.1429415" height="6.0000062" x="148.6503" y="246.70227"/>
+              <rect class="rare" id="WVS_27" width="5.1430097" height="6.0000052" x="153.79324" y="246.70227"/>
+              <rect class="rare" id="WVS_28" width="5.0194931" height="6.00001" x="158.93625" y="246.70227"/>
+              <rect class="rare" id="WVS_29" width="5.1243129" height="6.0000052" x="128.09683" y="252.70229"/>
+              <rect class="rare" id="WVS_30" width="5.1430087" height="6.0000153" x="133.22122" y="252.70229"/>
+              <rect class="rare" id="WVS_31" width="5.1429996" height="6.0000052" x="138.36427" y="252.70229"/>
+              <rect class="rare" id="WVS_32" width="5.1430292" height="6.0000086" x="143.50728" y="252.70229"/>
+              <rect class="rare" id="WVS_33" width="5.1429434" height="6.0000095" x="148.65031" y="252.70229"/>
+              <rect class="rare" id="WVS_34" width="5.1430097" height="6.0000148" x="153.79324" y="252.70229"/>
+              <rect class="rare" id="WVS_35" width="5.0194902" height="6.00001" x="158.93625" y="252.70229"/>
+              <rect class="rare" id="WVS_36" width="5.1243095" height="5.9293842" x="128.09683" y="258.70218"/>
+              <rect class="rare" id="WVS_37" width="5.1430082" height="5.929369" x="133.22122" y="258.70218"/>
+              <rect class="rare" id="WVS_38" width="5.1430078" height="5.92939" x="138.36427" y="258.70218"/>
+              <rect class="rare" id="WVS_39" width="5.1430097" height="5.9293661" x="143.50728" y="258.70221"/>
+              <rect class="rare" id="WVS_40" width="5.1429625" height="5.9293814" x="148.65028" y="258.70218"/>
+              <rect class="rare" id="WVS_41" width="5.1430025" height="5.9293795" x="153.79324" y="258.70221"/>
+              <rect class="rare" id="WVS_42" width="5.0194783" height="5.92939" x="158.93625" y="258.70218"/>
+              <path id="path2078" style="fill:none;stroke:#231f20;stroke-width:0.141111" d="m 128.09683,228.77256 h 35.8588 v 35.8588 h -35.8588 z"/>
+              <path d="m 128.02624,258.70197 h 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2082"/>
+              <path d="m 128.02624,252.70196 h 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2086"/>
+              <path d="m 128.02624,246.70195 h 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2090"/>
+              <path d="m 128.02624,240.70195 h 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2094"/>
+              <path d="m 128.02624,234.70198 h 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2098"/>
+              <path d="m 133.22114,228.70197 v 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2208"/>
+              <path d="m 138.36415,228.70197 v 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2212"/>
+              <path d="m 143.50715,228.70197 v 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2216"/>
+              <path d="m 148.65016,228.70197 v 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2220"/>
+              <path d="m 153.79313,228.70197 v 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2224"/>
+              <path d="m 158.93614,228.70197 v 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2228"/>
+              <text style="font-size:2.54px" x="166.90315" y="228.22734" class="de" id="text1965">Durchlässigkeit</text>
+              <text style="font-size:2.14667px" x="166.90315" y="233.03142" class="de" id="text1975">äusserst hoch</text>
+              <text style="font-size:2.14667px" x="166.90315" y="239.02866" class="de" id="text1977">sehr hoch</text>
+              <text style="font-size:2.14667px" x="166.90315" y="245.02588" class="de" id="text1979">hoch</text>
+              <text style="font-size:2.14667px" x="166.90315" y="251.0231" class="de" id="text1981">mittel</text>
+              <text style="font-size:2.14667px" x="166.90315" y="257.02029" class="de" id="text1983">gering</text>
+              <text style="font-size:2.14667px" x="166.90315" y="263.01727" class="de" id="text1985">sehr gering</text>
+              <text y="241.20065" x="-74.240952" style="font-size:2.54px" class="de" id="text2009" transform="rotate(-45)"><tspan id="tspan3380" x="-74.240952" y="241.20065">Vernässung:</tspan><tspan x="-74.240952" y="244.37566" id="tspan3479">stauwasser-</tspan><tspan x="-74.240952" y="247.55066" id="tspan3463">beeinflusste Böden</tspan></text>
+              <text style="font-size:2.14667px" x="-68.206734" y="252.94272" class="de" id="text1987" transform="rotate(-45)">Stagnogley</text>
+              <text style="font-size:2.14667px" transform="rotate(-45)" x="-64.600914" y="256.64597" class="de" id="text1989">Pseudogley</text>
+              <text style="font-size:2.14667px" transform="rotate(-45)" x="-60.969944" y="260.15414" class="de" id="text1991">stark pseudovergleyt</text>
+              <text style="font-size:2.14667px" transform="rotate(-45)" x="-57.141403" y="263.65759" class="de" id="text1995">pseudovergleyt</text>
+              <text style="font-size:2.14667px" transform="rotate(-45)" x="-53.563377" y="267.56039" class="de" id="text1997">schwach pseudovergleyt</text>
+              <text style="font-size:2.14667px" transform="rotate(-45)" x="-49.860081" y="271.26361" class="de" id="text2001">sehr schwach pseudovergleyt</text>
+              <text style="font-size:2.14667px" transform="rotate(-45)" x="-46.042038" y="275.19699" class="de" id="text2005">keine Vernässung</text>
+            </g>
+            <g inkscape:groupmode="layer" id="layer22" inkscape:label="Wasserdurchlaessigkeit_Vernaessung_Grund_Hangwasser" style="display:inline">
+              <rect class="rare" id="WVG_1" width="5.9292688" height="5.9295921" x="128.34697" y="166.19058"/>
+              <rect class="rare" id="WVG_2" width="5.9999762" height="5.9296036" x="134.27632" y="166.19058"/>
+              <rect class="rare" id="WVG_3" width="6.0000024" height="5.9296036" x="140.27632" y="166.19058"/>
+              <rect class="rare" id="WVG_4" width="6.0000043" height="5.9295945" x="146.27632" y="166.19058"/>
+              <rect class="rare" id="WVG_5" width="6.0000167" height="5.9296036" x="152.27632" y="166.19058"/>
+              <rect class="rare" id="WVG_6" width="5.9295239" height="5.9295921" x="158.27635" y="166.19058"/>
+              <rect class="rare" id="WVG_7" width="5.929285" height="6.0000186" x="128.34697" y="172.12018"/>
+              <rect class="rare" id="WVG_8" width="5.9999743" height="6.0000091" x="134.27632" y="172.12018"/>
+              <rect class="rare" id="WVG_9" width="5.9999995" height="6.0000086" x="140.27632" y="172.12018"/>
+              <rect class="rare" id="WVG_10" width="6.0000062" height="6.0000091" x="146.27632" y="172.12018"/>
+              <rect class="rare" id="WVG_11" width="6.000011" height="5.9999976" x="152.27632" y="172.12018"/>
+              <rect class="rare" id="WVG_12" width="5.9295239" height="6.0000091" x="158.27635" y="172.12018"/>
+              <rect class="rare" id="WVG_13" width="5.9292769" height="6.0000091" x="128.34697" y="178.12018"/>
+              <rect class="rare" id="WVG_14" width="5.9999781" height="6.0000091" x="134.27632" y="178.12018"/>
+              <rect class="rare" id="WVG_15" width="6.0000091" height="6.0000091" x="140.27632" y="178.12018"/>
+              <rect class="rare" id="WVG_16" width="6.0000105" height="6.0000091" x="146.27632" y="178.12018"/>
+              <rect class="rare" id="WVG_17" width="6.0000167" height="6.0000105" x="152.27632" y="178.12018"/>
+              <rect class="rare" id="WVG_18" width="5.9295239" height="6.0000091" x="158.27635" y="178.12018"/>
+              <rect class="rare" id="WVG_19" width="5.9292755" height="6.000001" x="128.34697" y="184.12019"/>
+              <rect class="rare" id="WVG_20" width="5.9999743" height="6.0000443" x="134.27632" y="184.12016"/>
+              <rect class="rare" id="WVG_21" width="5.9999995" height="6.0000091" x="140.27632" y="184.12019"/>
+              <rect class="rare" id="WVG_22" width="6.0000091" height="6.0000091" x="146.27632" y="184.12019"/>
+              <rect class="rare" id="WVG_23" width="6.0000091" height="6.0000091" x="152.27632" y="184.12019"/>
+              <rect class="rare" id="WVG_24" width="5.9295239" height="6.0000091" x="158.27635" y="184.12019"/>
+              <rect class="rare" id="WVG_25" width="5.9292769" height="6.0000091" x="128.34697" y="190.12019"/>
+              <rect class="rare" id="WVG_26" width="5.9999676" height="6.0000167" x="134.27632" y="190.12019"/>
+              <rect class="rare" id="WVG_27" width="6.0000105" height="6.0000134" x="140.27632" y="190.12019"/>
+              <rect class="rare" id="WVG_28" width="6.0000153" height="5.9999995" x="146.27632" y="190.12019"/>
+              <rect class="rare" id="WVG_29" width="6.0000091" height="6.0000091" x="152.27632" y="190.12019"/>
+              <rect class="rare" id="WVG_30" width="5.9295287" height="6.0000215" x="158.27632" y="190.12019"/>
+              <rect class="rare" id="WVG_31" width="5.9292755" height="5.9291716" x="128.34697" y="196.12021"/>
+              <rect class="rare" id="WVG_32" width="5.9999743" height="5.9291716" x="134.27632" y="196.12021"/>
+              <rect class="rare" id="WVG_33" width="6.0000091" height="5.9291716" x="140.27632" y="196.12021"/>
+              <rect class="rare" id="WVG_34" width="6.0000091" height="5.9291716" x="146.27632" y="196.12021"/>
+              <rect class="rare" id="WVG_35" width="6.0000215" height="5.9291887" x="152.27632" y="196.12019"/>
+              <rect class="rare" id="WVG_36" width="5.9295239" height="5.9291716" x="158.27635" y="196.12021"/>
+              <path id="path1788" style="fill:none;stroke:#231f20;stroke-width:0.141111" d="m 128.34695,166.19029 h 35.8588 v 35.8588 h -35.8588 z"/>
+              <path d="m 134.27623,166.11991 v 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path1792"/>
+              <path d="m 140.2762,166.11991 v 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path1796"/>
+              <path d="m 146.27621,166.11991 v 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path1800"/>
+              <path d="m 152.27622,166.11991 v 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path1804"/>
+              <path d="m 158.27623,166.11991 v 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path1808"/>
+              <path d="m 128.27622,196.11992 h 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path1812"/>
+              <path d="m 128.27622,190.11991 h 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path1816"/>
+              <path d="m 128.27622,184.1199 h 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path1820"/>
+              <path d="m 128.27622,178.11989 h 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path1824"/>
+              <path d="m 128.27622,172.11989 h 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path1828"/>
+              <text style="font-size:2.54px" x="166.90315" y="165.76729" class="de" id="text2111">Durchlässigkeit</text>
+              <text style="font-size:2.14667px" x="167.15656" y="170.31131" class="de" id="text2126">äusserst hoch</text>
+              <text style="font-size:2.14667px" x="167.15656" y="176.30853" class="de" id="text2128">sehr hoch</text>
+              <text style="font-size:2.14667px" x="167.15656" y="182.30577" class="de" id="text2130">hoch</text>
+              <text style="font-size:2.14667px" x="167.15656" y="188.30298" class="de" id="text2132">mittel</text>
+              <text style="font-size:2.14667px" x="167.15656" y="194.3002" class="de" id="text2134">gering</text>
+              <text style="font-size:2.14667px" x="167.15656" y="200.29742" class="de" id="text2136">sehr gering</text>
+              <text transform="rotate(-45)" style="font-size:2.14667px" x="-23.550171" y="209.11752" class="de" id="text2138">sumpfig</text>
+              <text transform="rotate(-45)" style="font-size:2.14667px" x="-19.292707" y="213.37498" class="de" id="text2140">sehr starkgrundnass</text>
+              <text transform="rotate(-45)" style="font-size:2.14667px" x="-15.035235" y="217.63245" class="de" id="text2144">stark grundnass</text>
+              <text transform="rotate(-45)" style="font-size:2.14667px" x="-10.56604" y="221.68448" class="de" id="text2148">grundnass</text>
+              <text transform="rotate(-45)" style="font-size:2.14667px" x="-6.5203233" y="226.14737" class="de" id="text2150">schwachgrundnass</text>
+              <text transform="rotate(-45)" style="font-size:2.14667px" x="-2.1480887" y="230.6349" class="de" id="text2154">keine Vernässung</text>
+              <text y="197.62228" x="-29.079824" style="font-size:2.54px" class="de" id="text2158" transform="rotate(-45)"><tspan id="tspan3467" x="-29.079824" y="197.62228">Vernässung: grund-</tspan><tspan x="-29.079824" y="200.79729" id="tspan3469">und hangwasser-</tspan><tspan x="-29.079824" y="203.97229" id="tspan3477">beeinflusste Böden</tspan></text>
+            </g>
+            <g inkscape:groupmode="layer" id="layer21" inkscape:label="Wasserdurchlaessigkeit_Vernaessung" style="display:inline">
+              <text style="font-size:3.175px" x="127.2178" y="139.7659" id="text2167"><tspan class="de" id="tspan2163">Wasserdurchlässigkeit und Vernässung</tspan><tspan class="fr" id="tspan2165">Perméabilité à l'eau et hydromorphie</tspan></text>
+            </g>
+            <g inkscape:groupmode="layer" id="layer20" inkscape:label="Bodenentwicklung" style="display:inline">
+              <rect class="rare" id="BE_Braunerd_norm" width="8.0440922" height="9.4707403" x="67.740036" y="174.60678"/>
+              <rect class="rare" id="BE_Parabraunerd_norm" width="8.0440922" height="9.4707403" x="75.784126" y="174.60678"/>
+              <rect class="rare" id="BE_Podsol_norm" width="8.8236036" height="9.4707403" x="83.828217" y="174.60678"/>
+              <rect class="rare" id="BE_Stauw_norm" width="9.0139313" height="9.4707403" x="92.651817" y="174.60678"/>
+              <rect class="rare" id="BE_Grundw_norm" width="9.0139313" height="9.4707403" x="101.66575" y="174.60678"/>
+              <rect class="rare" id="BE_Ranker_vernaesst" width="4.4561028" height="3.0118001" x="49.915623" y="184.07751"/>
+              <rect class="rare" id="BE_Regosol_vernaesst" width="4.4561057" height="3.0118001" x="54.371723" y="184.07751"/>
+              <rect class="rare" id="BE_Pararendz_vernaesst" width="4.4561067" height="3.0118001" x="58.827827" y="184.07751"/>
+              <rect class="rare" id="BE_Rendz_vernaesst" width="4.4561014" height="3.0117996" x="63.283932" y="184.07751"/>
+              <rect class="rare" id="BE_Braunerd_vernaesst" width="8.0440912" height="3.0117929" x="67.740036" y="184.07751"/>
+              <rect class="rare" id="BE_Parabraunerd_vernaesst" width="8.0440922" height="3.0117884" x="75.784126" y="184.07751"/>
+              <rect class="rare" id="BE_Podsol_vernaesst" width="8.8235998" height="3.0117929" x="83.828217" y="184.07751"/>
+              <rect class="rare" id="BE_Ranker_verbraunt" width="4.4560246" height="2.99998" x="49.915867" y="190.08934"/>
+              <rect class="rare" id="BE_Braunerd_podso" width="8.0705843" height="2.99998" x="67.739967" y="190.08934"/>
+              <rect class="rare" id="BE_Stauw_nassgebl" width="9.0880709" height="2.99998" x="92.651825" y="190.08934"/>
+              <rect class="rare" id="BE_Grundw_nassgebl" width="9.0880709" height="2.99998" x="101.7399" y="190.08934"/>
+              <rect class="rare" id="BE_Parabraunerd_podso" width="8.0705843" height="2.99998" x="75.810555" y="190.08934"/>
+              <rect class="rare" id="BE_Regosol_verbraunt" width="4.4560246" height="2.99998" x="54.371891" y="190.08934"/>
+              <rect class="rare" id="BE_Pararendz_verbraunt" width="4.4560246" height="2.99998" x="58.827915" y="190.08934"/>
+              <rect class="rare" id="BE_Rendz_verbraunt" width="4.4560246" height="2.99998" x="63.283939" y="190.08934"/>
+              <rect class="rare" id="BE_V_OrgB" width="3.6459594" height="3.6459501" x="9.907856" y="148.0274"/>
+              <rect class="rare" id="BE_V_Auenb" width="3.6459594" height="3.6459601" x="9.907856" y="153.22734"/>
+              <rect class="rare" id="BE_V_neutrBraune" width="3.6459594" height="3.6459501" x="9.907856" y="158.42729"/>
+              <rect class="rare" id="BE_V_Braunpod" width="3.6459594" height="3.6459601" x="9.907856" y="163.62724"/>
+              <rect class="rare" id="BE_V_Humuspod" width="3.6459594" height="3.6459601" x="9.907856" y="168.82716"/>
+              <rect class="rare" id="BE_GestRohB" width="11.087418" height="9.4707403" x="38.828205" y="174.60678"/>
+              <rect class="rare" id="BE_Ranker_norm" width="4.4561028" height="9.4707336" x="49.915623" y="174.60678"/>
+              <rect class="rare" id="BE_Regosol_norm" width="4.4561028" height="9.4707336" x="54.371727" y="174.60678"/>
+              <rect class="rare" id="BE_Pararendz_norm" width="4.4561028" height="9.4707336" x="58.827831" y="174.60678"/>
+              <rect class="rare" id="BE_Rendz_norm" width="4.4561028" height="9.4707336" x="63.283936" y="174.60678"/>
+              <text style="font-size:3.175px" x="9.8639364" y="139.57986" id="text2204"><tspan class="de" id="tspan2200">Bodenentwicklung</tspan><tspan class="fr" id="tspan2202">Formation des sols</tspan></text>
+              <text style="font-size:2.54px" transform="rotate(-90)" x="-172.79251" y="45.242088" class="de" id="text2206">Gesteinsrohböden</text>
+              <text style="font-size:2.54px" transform="rotate(-90)" x="-172.79251" y="53.066063" class="de" id="text2208">Ranker</text>
+              <text style="font-size:2.54px" transform="rotate(-90)" x="-172.79251" y="57.2994" class="de" id="text2210">Regosol</text>
+              <text style="font-size:2.54px" transform="rotate(-90)" x="-172.79251" y="61.53273" class="de" id="text2212">Pararendzina</text>
+              <text style="font-size:2.54px" transform="rotate(-90)" x="-172.79251" y="65.766068" class="de" id="text2214">Rendzina</text>
+              <text style="font-size:2.54px" transform="rotate(-90)" x="-172.79251" y="72.445038" class="de" id="text2216">Braunerde</text>
+              <text style="font-size:2.54px" transform="rotate(-90)" x="-172.79251" y="80.911705" class="de" id="text2218">Parabraunerde</text>
+              <text style="font-size:2.54px" transform="rotate(-90)" x="-172.79251" y="87.881851" class="de" id="text2220">Podsol</text>
+              <text style="font-size:2.293px" transform="rotate(-90)" x="-172.79251" y="90.704079" class="de" id="text2222">(Eisen-Humuspodsol)</text>
+              <text style="font-size:2.54px" transform="rotate(-90)" x="-172.79251" y="96.692131" class="de" id="text2224">Stauwasser</text>
+              <text style="font-size:2.293px" transform="rotate(-90)" x="-172.79251" y="99.514351" class="de" id="text2226">(Pseudo-/ Stagnogley)</text>
+              <text style="font-size:2.54px" transform="rotate(-90)" x="-172.79251" y="105.15879" class="de" id="text2228">Grund-/Hangwasser</text>
+              <text style="font-size:2.293px" transform="rotate(-90)" x="-172.79251" y="107.98102" class="de" id="text2230">(Gley/Hanggley)</text>
+              <text style="font-size:2.54px" x="53.177509" y="144.3172" class="de" id="text2232"><tspan id="tspan4297" style="text-align:center;text-anchor:middle">rohe Böden</tspan></text>
+              <text style="font-size:2.54px" x="80.08744" y="144.3172" class="de" id="text2234"><tspan style="text-align:center;text-anchor:middle" y="144.3172" x="80.08744" id="tspan4289">entwickelte</tspan><tspan style="text-align:center;text-anchor:middle" y="147.4922" x="80.08744" id="tspan4291" sodipodi:role="line">Böden</tspan></text>
+              <text style="font-size:2.54px" x="101.69986" y="144.3172" class="de" id="text2238"><tspan style="text-align:center;text-anchor:middle" y="144.3172" x="101.69986" id="tspan4293">vernässte</tspan><tspan style="text-align:center;text-anchor:middle" y="147.4922" x="101.69986" id="tspan4295" sodipodi:role="line">Böden</tspan></text>
+              <text style="font-size:2.54px" x="14.970994" y="150.30788" class="de" id="text2242">organische Böden</text>
+              <text style="font-size:2.54px" x="14.970994" y="155.74065" class="de" id="text2244">Auenböden</text>
+              <text style="font-size:2.54px" x="14.970994" y="161.17342" class="de" id="text2246">neutr. Braunerden</text>
+              <text style="font-size:2.54px" x="14.970994" y="166.6062" class="de" id="text2248">Braunpodsole</text>
+              <text style="font-size:2.54px" x="14.970994" y="172.03899" class="de" id="text2250">Humuspodsole</text>
+              <path id="path1606" style="fill:none;stroke:#231f20;stroke-width:0.0881944" d="m 9.9078566,151.67322 h 3.6459594 v -3.64595 H 9.9078566 Z"/>
+              <path id="path1608" style="fill:none;stroke:#231f20;stroke-width:0.0881944" d="m 9.9078566,156.87317 h 3.6459594 v -3.64596 H 9.9078566 Z"/>
+              <path id="path1610" style="fill:none;stroke:#231f20;stroke-width:0.0881944" d="m 9.9078566,162.07311 h 3.6459594 v -3.64595 H 9.9078566 Z"/>
+              <path id="path1612" style="fill:none;stroke:#231f20;stroke-width:0.0881944" d="M 9.9078566,167.27306 H 13.553816 V 163.6271 H 9.9078566 Z"/>
+              <path id="path1614" style="fill:none;stroke:#231f20;stroke-width:0.0881944" d="m 9.9078566,172.473 h 3.6459594 v -3.64596 H 9.9078566 Z"/>
+              <text style="font-size:2.14667px" x="71.420677" y="195.24527" class="de" id="text2257">podsoliert</text>
+              <text style="font-size:2.14667px" x="54.245468" y="195.24527" class="de" id="text2259">verbraunt</text>
+              <text style="font-size:2.14667px" x="95.70713" y="195.24527" class="de" id="text2261">nassgebleicht</text>
+              <text style="font-size:2.14667px" x="39.692261" y="186.3463" class="de" id="text2263">vernässt</text>
+              <path d="m 49.915872,190.03629 v 3.10586" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2260"/>
+              <path d="m 38.828208,142.62611 v 41.53932" style="fill:none;stroke:#231f20;stroke-width:0.180073" id="path2284"/>
+              <path d="M 38.740012,184.07738 H 110.73984" style="fill:none;stroke:#231f20;stroke-width:0.176389" id="path2288"/>
+              <path d="m 110.67969,142.62611 v 41.53932" style="fill:none;stroke:#231f20;stroke-width:0.180073" id="path2292"/>
+              <path d="M 38.740012,174.60664 H 110.73984" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2296"/>
+              <path d="m 49.915626,154.60664 v 32.53564" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2300"/>
+              <path d="m 92.651828,142.71131 v 44.43086" style="fill:none;stroke:#231f20;stroke-width:0.107788" id="path2304"/>
+              <path d="m 67.740039,142.71131 v 44.43086" style="fill:none;stroke:#231f20;stroke-width:0.107788" id="path2308"/>
+              <path d="m 83.828224,154.60664 v 32.48272" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2312"/>
+              <path d="m 110.82797,190.03633 v 3.10868" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2316"/>
+              <path d="M 49.862709,187.08918 H 92.651828" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2320"/>
+              <path d="M 92.651828,190.08921 H 110.828" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2324"/>
+              <path d="M 92.651828,193.08919 H 110.828" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2328"/>
+              <path d="m 67.73997,190.08921 v 3.00002" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2712"/>
+              <path d="m 83.881138,190.03629 v 3.10586" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2716"/>
+              <path d="m 92.651828,190.03633 v 3.10868" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2720"/>
+              <path d="M 49.915872,190.08921 H 83.93388" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2724"/>
+              <path d="M 49.915872,193.08919 H 83.93388" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2728"/>
+            </g>
+            <g inkscape:groupmode="layer" id="layer19" inkscape:label="Gründigkeit_Skelettgehalt" style="display:inline">
+              <text style="font-size:3.175px" x="127.82934" y="69.826729" id="text2288"><tspan class="de" id="tspan2284">Gründigkeit und Skelettgehalt</tspan><tspan class="fr" id="tspan2286">Profondeur et pierrosité</tspan></text>
+              <text class="de" style="font-size:2.14667px" x="166.62285" y="121.79599" id="text2290">äusserst tief</text>
+              <text style="font-size:2.54px" x="166.30283" y="87.40696" class="de" id="text2292">Gründigkeit</text>
+              <text style="font-size:2.54px" x="25.98044" y="148.45364" class="de" id="text2294" transform="rotate(-45)">Skelettgehalt</text>
+              <text style="font-size:2.14667px" transform="rotate(-45)" x="31.64183" y="154.05885" class="de" id="text2296">äusserst hoch</text>
+              <text style="font-size:2.14667px" transform="rotate(-45)" x="35.676147" y="158.10362" class="de" id="text2300">sehr hoch</text>
+              <text style="font-size:2.14667px" transform="rotate(-90)" x="-81.681892" y="139.5993" class="de" id="text2302"/>
+              <text style="font-size:2.14667px" transform="rotate(-45)" x="40.028038" y="162.56242" class="de" id="text2304">hoch</text>
+              <text style="font-size:2.14667px" transform="rotate(-45)" x="44.042961" y="166.57733" class="de" id="text2306">mittel</text>
+              <text style="font-size:2.14667px" transform="rotate(-45)" x="48.574093" y="170.58438" class="de" id="text2308">gering</text>
+              <text style="font-size:2.14667px" transform="rotate(-45)" x="52.591087" y="175.01859" class="de" id="text2310">sehr gering</text>
+              <rect class="rare" id="GS_1" width="5.9293399" height="5.9295597" x="128.29686" y="88.15242"/>
+              <rect class="rare" id="GS_2" width="6.0000124" height="5.9295654" x="134.22629" y="88.15242"/>
+              <rect class="rare" id="GS_3" width="6.00001" height="5.9295597" x="140.22632" y="88.15242"/>
+              <rect class="rare" id="GS_4" width="6.0000224" height="5.9295597" x="146.22633" y="88.15242"/>
+              <rect class="rare" id="GS_5" width="5.99998" height="5.9295654" x="152.22635" y="88.15242"/>
+              <rect class="rare" id="GS_6" width="5.9294496" height="5.9295597" x="158.22633" y="88.15242"/>
+              <rect class="rare" id="GS_7" width="5.9293394" height="6.0000062" x="128.29686" y="94.08197"/>
+              <rect class="rare" id="GS_8" width="6.0000091" height="6.00001" x="134.22629" y="94.08197"/>
+              <rect class="rare" id="GS_9" width="6.0000224" height="6.0000138" x="140.22632" y="94.08197"/>
+              <rect class="rare" id="GS_10" width="6.0000076" height="6.0000048" x="146.22633" y="94.081978"/>
+              <rect class="rare" id="GS_11" width="5.9999781" height="6.00001" x="152.22635" y="94.08197"/>
+              <rect class="rare" id="GS_12" width="5.9294524" height="6.00001" x="158.22633" y="94.08197"/>
+              <rect class="rare" id="GS_13" width="5.9293399" height="5.9999409" x="128.29686" y="100.08199"/>
+              <rect class="rare" id="GS_14" width="5.9999971" height="5.9999461" x="134.22629" y="100.08199"/>
+              <rect class="rare" id="GS_15" width="6.00001" height="5.9999738" x="140.22632" y="100.08199"/>
+              <rect class="rare" id="GS_16" width="6.00001" height="5.9999719" x="146.22633" y="100.08199"/>
+              <rect class="rare" id="GS_17" width="5.99998" height="5.9999719" x="152.22635" y="100.08199"/>
+              <rect class="rare" id="GS_18" width="5.9294519" height="5.9999719" x="158.22632" y="100.08199"/>
+              <rect class="rare" id="GS_19" width="5.9293375" height="6.0000396" x="128.29686" y="106.08193"/>
+              <rect class="rare" id="GS_20" width="5.9999971" height="6.00001" x="134.22629" y="106.08196"/>
+              <rect class="rare" id="GS_21" width="5.9999971" height="6.00001" x="140.22632" y="106.08196"/>
+              <rect class="rare" id="GS_22" width="6.00001" height="6.00001" x="146.22633" y="106.08196"/>
+              <rect class="rare" id="GS_23" width="5.9999676" height="6.0000091" x="152.22635" y="106.08196"/>
+              <rect class="rare" id="GS_24" width="5.9294391" height="6.00001" x="158.22633" y="106.08196"/>
+              <rect class="rare" id="GS_25" width="5.9293375" height="6.0447721" x="128.29686" y="112.08197"/>
+              <rect class="rare" id="GS_26" width="6.00001" height="6.0447698" x="134.22629" y="112.08197"/>
+              <rect class="rare" id="GS_27" width="6.00001" height="6.0447698" x="140.22632" y="112.08197"/>
+              <rect class="rare" id="GS_28" width="6.00001" height="6.0447698" x="146.22633" y="112.08197"/>
+              <rect class="rare" id="GS_29" width="5.99998" height="6.0447698" x="152.22635" y="112.08197"/>
+              <rect class="rare" id="GS_30" width="5.9294496" height="6.0447698" x="158.22633" y="112.08197"/>
+              <rect class="rare" id="GS_31" width="5.9293399" height="5.88448" x="128.29686" y="118.12674"/>
+              <rect class="rare" id="GS_32" width="6.0000072" height="5.8844838" x="134.22629" y="118.12674"/>
+              <rect class="rare" id="GS_33" width="6.00001" height="5.88448" x="140.22632" y="118.12674"/>
+              <rect class="rare" id="GS_34" width="6.00001" height="5.8844838" x="146.22633" y="118.12674"/>
+              <rect class="rare" id="GS_35" width="5.99998" height="5.88448" x="152.22635" y="118.12674"/>
+              <rect class="rare" id="GS_36" width="5.9294496" height="5.88448" x="158.22633" y="118.12674"/>
+              <text class="de" style="font-size:2.14667px" x="166.62285" y="91.809875" id="text2350">sehr flach</text>
+              <text class="de" style="font-size:2.14667px" x="166.62285" y="97.807098" id="text2352">flach</text>
+              <text class="de" style="font-size:2.14667px" x="166.62285" y="103.80432" id="text2354">mittel</text>
+              <text class="de" style="font-size:2.14667px" x="166.62285" y="109.80154" id="text2356">tief</text>
+              <text class="de" style="font-size:2.14667px" x="166.62285" y="115.79877" id="text2358">sehr tief</text>
+              <path id="path1786" style="fill:none;stroke:#231f20;stroke-width:0.141111" d="m 128.29686,88.152418 h 35.8588 v 35.858802 h -35.8588 z"/>
+              <path d="M 134.2262,88.081978 V 124.08188" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path1876"/>
+              <path d="M 140.22621,88.081978 V 124.08188" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path1880"/>
+              <path d="M 146.22622,88.081978 V 124.08188" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path1884"/>
+              <path d="M 152.22623,88.081978 V 124.08188" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path1888"/>
+              <path d="M 158.22621,88.081978 V 124.08188" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path1892"/>
+              <path d="m 128.22623,118.12674 h 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path1896"/>
+              <path d="m 128.22623,112.08197 h 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path1900"/>
+              <path d="m 128.22623,106.08196 h 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path1904"/>
+              <path d="m 128.22623,100.08199 h 35.99991" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path1908"/>
+              <path id="path15422" style="fill:none;stroke:#231f20;stroke-width:0.105833" d="m 128.22623,94.081978 h 35.99991"/>
+            </g>
+            <g inkscape:groupmode="layer" id="layer18" inkscape:label="Humusform" style="display:inline">
+              <rect class="rare" id="HUF_mu-f_hydro" width="11.979729" height="3.013237" x="87.122612" y="104.01996"/>
+              <rect class="rare" id="HUF_mu-l_hydro" width="11.979705" height="3.0132289" x="99.102341" y="104.01997"/>
+              <rect class="rare" id="HUF_mo-rh_xero" width="11.979735" height="2.9605799" x="51.183411" y="91.510246"/>
+              <rect class="rare" id="HUF_mo-rh_norm" width="11.979736" height="9.5491562" x="51.183407" y="94.470818"/>
+              <rect class="rare" id="HUF_mo-rh_hydro" width="11.979738" height="3.0132246" x="51.183407" y="104.01996"/>
+              <rect class="rare" id="HUF_mo-typ_xero" width="11.979733" height="2.9605799" x="63.163143" y="91.510246"/>
+              <rect class="rare" id="HUF_mo-typ_norm" width="11.979733" height="9.5491476" x="63.163143" y="94.470825"/>
+              <rect class="rare" id="HUF_mo-typ_hydro" width="11.979735" height="3.0132275" x="63.163143" y="104.01996"/>
+              <rect class="rare" id="HUF_mo-mull_xero" width="11.979735" height="2.9605799" x="75.142876" y="91.510246"/>
+              <rect class="rare" id="HUF_mo-mull_norm" width="11.979736" height="9.5491476" x="75.142876" y="94.470825"/>
+              <rect class="rare" id="HUF_mo-mull_hydro" width="11.979734" height="3.0132275" x="75.142876" y="104.01996"/>
+              <rect class="rare" id="HUF_V_Anmoor" width="3.6459579" height="3.6459601" x="39.458172" y="116.14621"/>
+              <rect class="rare" id="HUF_V_Torf" width="3.6459579" height="3.6459601" x="39.458172" y="120.68047"/>
+              <rect class="rare" id="HUF_V_Kalkmull" width="3.6459579" height="3.6459601" x="62.789833" y="116.16597"/>
+              <rect class="rare" id="HUF_V_Kalkmoder" width="3.6459579" height="3.6459501" x="62.789833" y="120.55206"/>
+              <rect class="rare" id="HUF_V_Tangel" width="3.645957" height="3.6459601" x="86.255905" y="116.16738"/>
+              <rect class="rare" id="HUF_V_erod" width="3.645957" height="3.6459501" x="86.255905" y="120.70199"/>
+              <rect class="rare" id="HUF_mu-l_xero" width="11.979705" height="2.9605799" x="99.102341" y="91.510246"/>
+              <rect class="rare" id="HUF_mu-f_xero" width="11.97973" height="2.9605844" x="87.122612" y="91.510246"/>
+              <rect class="rare" id="HUF_mu-l_norm" width="11.979705" height="9.5491486" x="99.102341" y="94.470833"/>
+              <rect class="rare" id="HUF_mu-f_norm" width="11.979733" height="9.5491505" x="87.122612" y="94.470818"/>
+              <rect class="rare" id="HUF_rh_xero" width="11.999487" height="2.9605799" x="39.183922" y="91.510246"/>
+              <rect class="rare" id="HUF_rh_norm" width="11.999488" height="9.5491514" x="39.183922" y="94.470818"/>
+              <rect class="rare" id="HUF_rh_hydro" width="11.999487" height="3.0132246" x="39.183922" y="104.01996"/>
+              <text style="font-size:3.175px" x="9.9538603" y="76.360275" id="text2400"><tspan class="de" id="tspan2396">Humusform</tspan><tspan class="fr" id="tspan2398">Forme d‘humus</tspan></text>
+              <path d="M 39.183928,79.116978 V 107.11694" style="fill:none;stroke:#231f20;stroke-width:0.176036" id="path2332"/>
+              <path d="M 39.096298,107.03319 H 110.97477" style="fill:none;stroke:#231f20;stroke-width:0.176036" id="path2336"/>
+              <path d="M 39.096298,104.01997 H 110.97477" style="fill:none;stroke:#231f20;stroke-width:0.105481" id="path2340"/>
+              <path d="M 111.08205,79.176908 V 107.17687" style="fill:none;stroke:#231f20;stroke-width:0.176036" id="path2344"/>
+              <path d="M 39.096298,94.470818 H 110.97477" style="fill:none;stroke:#231f20;stroke-width:0.105481" id="path2348"/>
+              <path d="M 39.096298,91.510238 H 110.97477" style="fill:none;stroke:#231f20;stroke-width:0.105481" id="path2352"/>
+              <path d="M 63.16315,83.176918 V 107.17673" style="fill:none;stroke:#231f20;stroke-width:0.105481" id="path2356"/>
+              <path d="M 87.122618,79.176908 V 107.03321" style="fill:none;stroke:#231f20;stroke-width:0.10521" id="path2360"/>
+              <path d="M 51.183415,79.176908 V 107.17687" style="fill:none;stroke:#231f20;stroke-width:0.105481" id="path2364"/>
+              <path d="M 75.142883,83.176918 V 107.17673" style="fill:none;stroke:#231f20;stroke-width:0.105481" id="path2368"/>
+              <path d="M 99.102348,83.176921 V 107.03321" style="fill:none;stroke:#231f20;stroke-width:0.12803" id="path2372"/>
+              <text style="font-size:2.54px" x="42.577572" y="81.068626" class="de" id="text2413">Roh-</text>
+              <text style="font-size:2.54px" x="41.377457" y="83.890846" class="de" id="text2415">humus</text>
+              <text style="font-size:2.54px" x="65.215775" y="81.068626" class="de" id="text2417">Moder</text>
+              <text style="font-size:2.54px" x="96.184311" y="81.068626" class="de" id="text2419">Mull</text>
+              <text style="font-size:2.14667px" x="51.966858" y="84.846794" class="de" id="text2421">Rohhumus-</text>
+              <text style="font-size:2.14667px" x="54.204208" y="87.669006" class="de" id="text2423">artiger</text>
+              <text style="font-size:2.14667px" x="54.143845" y="90.491241" class="de" id="text2425">Moder</text>
+              <text style="font-size:2.14667px" x="64.969154" y="84.846794" class="de" id="text2427">Typischer</text>
+              <text style="font-size:2.14667px" x="66.143829" y="87.669006" class="de" id="text2429">Moder</text>
+              <text style="font-size:2.14667px" x="76.099228" y="84.846794" class="de" id="text2431">Mullartiger</text>
+              <text style="font-size:2.14667px" x="78.038025" y="87.669006" class="de" id="text2433">Moder</text>
+              <text style="font-size:2.14667px" x="90.374588" y="84.846794" class="de" id="text2435">F-Mull</text>
+              <text style="font-size:2.14667px" x="102.26878" y="84.846794" class="de" id="text2437">L-Mull</text>
+              <path d="M 9.8462976,94.395708 H 33.846122" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2436"/>
+              <path d="M 9.8462976,103.94487 H 33.846122" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2440"/>
+              <text style="font-size:2.14667px" x="9.9521303" y="90.19841" class="de" id="text2441">trockene Ausprägung</text>
+              <text style="font-size:2.14667px" x="9.9521303" y="93.02063" class="de" id="text2443">(Xeroformen)</text>
+              <text style="font-size:2.14667px" x="9.9521303" y="106.89376" class="de" id="text2445">feuchte Ausprägung</text>
+              <text style="font-size:2.14667px" x="9.9521303" y="109.71598" class="de" id="text2447">(Hydroformen)</text>
+              <text style="font-size:2.54px" x="91.32177" y="118.62548" class="de" id="text2449">Tangelhumus</text>
+              <text style="font-size:2.54px" x="91.32177" y="123.3527" class="de" id="text2451">erodiert</text>
+              <path id="path1624" style="fill:none;stroke:#231f20;stroke-width:0.0881944" d="m 86.255911,119.81334 h 3.645957 v -3.64596 h -3.645957 z"/>
+              <path id="path1626" style="fill:none;stroke:#231f20;stroke-width:0.0881944" d="m 86.255911,124.34794 h 3.645957 v -3.64595 h -3.645957 z"/>
+              <text style="font-size:2.54px" x="10.059693" y="118.41468" class="de" id="text2455">Varianten</text>
+              <text style="font-size:2.54px" x="67.846344" y="118.62548" class="de" id="text2457">Kalkmull</text>
+              <text style="font-size:2.54px" x="67.846344" y="123.3527" class="de" id="text2459">Kalkmoder</text>
+              <path id="path1640" style="fill:none;stroke:#231f20;stroke-width:0.0881944" d="m 62.78984,119.81193 h 3.645958 v -3.64596 H 62.78984 Z"/>
+              <path id="path1642" style="fill:none;stroke:#231f20;stroke-width:0.0881944" d="m 62.78984,124.19801 h 3.645958 v -3.64595 H 62.78984 Z"/>
+              <text style="font-size:2.54px" x="44.4305" y="118.62548" class="de" id="text2463">Anmoor</text>
+              <text style="font-size:2.54px" x="44.4305" y="123.3527" class="de" id="text2465">Torf</text>
+              <path id="path2066" style="fill:none;stroke:#231f20;stroke-width:0.0881944" d="m 39.458176,119.79217 h 3.645958 v -3.64596 h -3.645958 z"/>
+              <path id="path2068" style="fill:none;stroke:#231f20;stroke-width:0.0881944" d="m 39.458176,124.32643 h 3.645958 v -3.64596 h -3.645958 z"/>
+            </g>
+            <g inkscape:groupmode="layer" id="layer17" inkscape:label="Boden" style="display:inline">
+              <text style="font-size:3.98667px" x="9.8639364" y="69.893196" id="text2474"><tspan class="de">Boden</tspan><tspan class="fr">Sol</tspan></text>
+            </g>
+            <g inkscape:groupmode="layer" id="layer16" inkscape:label="Exposition" style="display:inline">
+              <path id="E_NNW-N" class="rare" d="m 171.97981,47.854338 -3.175,-7.027333 c 0.90716,-0.423564 1.96646,-0.677333 3.175,-0.677333 z"/>
+              <path id="E_S-SSW" class="rare" d="m 171.97981,55.601448 c -1.18209,0 -2.1958,-0.18458 -3.09033,-0.635 l 3.09033,-7.112 z"/>
+              <path id="E_E-ESE" class="rare" d="m 179.68465,47.854338 c -0.053,1.084148 -0.21093,2.194431 -0.59267,2.963333 l -7.11235,-2.963333 z"/>
+              <path id="E_ENE-E" class="rare" d="m 179.68465,47.854338 h -7.70502 l 7.02769,-3.090333 c 0.48091,0.984498 0.66835,1.959612 0.67733,3.090333 z"/>
+              <path id="E_NE-ENE" class="rare" d="m 171.97981,47.854338 5.461,-5.418667 c 0.73432,0.711658 1.30297,1.527783 1.56669,2.328334 z"/>
+              <path id="E_NNE-NE" class="rare" d="m 171.97981,47.854338 2.921,-7.112 c 1.03336,0.377195 1.90761,1.0699 2.54,1.693333 z"/>
+              <path id="E_N-NNE" class="rare" d="m 171.97981,47.854338 v -7.704666 c 1.06788,0 2.02959,0.150102 2.921,0.592666 z"/>
+              <path id="E_ESE-SE" class="rare" d="m 177.48325,53.273076 -5.50333,-5.418667 7.112,2.963334 c -0.37635,1.007191 -0.89268,1.739341 -1.60867,2.455333 z"/>
+              <path id="E_SE-SSE" class="rare" d="m 177.48325,53.273076 c -0.68126,0.773638 -1.51904,1.30212 -2.45533,1.693332 l -3.048,-7.111999 z"/>
+              <path id="E_SSE-S" class="rare" d="m 171.97981,47.854338 3.048,7.112 c -0.9968,0.50271 -2.16105,0.635 -3.048,0.635 z"/>
+              <path id="E_SSW-SW" class="rare" d="m 171.97981,47.854338 -3.09033,7.112 c -0.99421,-0.354307 -1.72236,-0.990553 -2.413,-1.608667 z"/>
+              <path id="E_SW-WSW" class="rare" d="m 171.97981,47.854338 -5.50333,5.503333 c -0.60129,-0.676099 -1.34685,-1.518626 -1.651,-2.497666 z"/>
+              <path id="E_NW-NNW" class="rare" d="m 171.97981,47.854338 -5.461,-5.503333 c 0.62363,-0.570025 1.56055,-1.239304 2.286,-1.524 z"/>
+              <path id="E_WNW-NW" class="rare" d="m 171.97981,47.854338 -7.112,-3.090333 c 0.41179,-0.926656 0.97903,-1.741032 1.651,-2.413 z"/>
+              <path id="E_WSW-W" class="rare" d="m 171.97981,47.854338 -7.15433,3.005667 c -0.38057,-0.782577 -0.63536,-2.357683 -0.63536,-3.005667 z"/>
+              <path id="E_W-WNW" class="rare" d="m 171.97981,47.854338 h -7.78969 c 0,-0.929409 0.22057,-2.169606 0.67769,-3.090333 z"/>
+              <text style="font-size:3.98667px" x="163.59335" y="34.907825" id="text2497"><tspan class="de">Exposition</tspan><tspan class="fr">Exposition</tspan></text>
+              <text style="font-size:2.293px" x="171.06281" y="38.852062" id="text2503"><tspan class="de" id="tspan2499">N</tspan><tspan class="fr" id="tspan2501">N</tspan></text>
+              <text style="font-size:2.293px" x="171.11914" y="58.695213" id="text2509"><tspan class="de" id="tspan2505">S</tspan><tspan class="fr" id="tspan2507">S</tspan></text>
+              <text style="font-size:2.293px" x="181.72989" y="48.48917" id="text2515"><tspan class="de" id="tspan2511">E</tspan><tspan class="fr" id="tspan2513">E</tspan></text>
+              <text style="font-size:2.293px" x="160.6826" y="48.453579" id="text2521"><tspan class="de" id="tspan2517">W</tspan><tspan class="fr" id="tspan2519">O</tspan></text>
+              <path d="m 179.72723,47.889591 c 0,4.2799 -3.46922,7.749117 -7.74912,7.749117 -4.27954,0 -7.74911,-3.469217 -7.74911,-7.749117 0,-4.2799 3.46957,-7.749116 7.74911,-7.749116 4.2799,0 7.74912,3.469216 7.74912,7.749116 z" style="fill:none;stroke:#231f20;stroke-width:0.147461" id="path1706"/>
+              <path d="m 178.72774,47.857171 h 1.96744 m -17.4311,0 h 2.01013 m 11.48891,-4.722636 1.42452,-1.424164 m -12.32535,12.325703 1.42134,-1.422048 m 4.71311,1.959328 v 1.996374 m -3.5e-4,-17.431107 v 1.982258 m -4.72722,1.960034 -1.39877,-1.399117 m 12.32535,12.325703 -1.43122,-1.431573" style="fill:none;stroke:#231f20;stroke-width:0.0737306" id="path1710"/>
+            </g>
+            <g inkscape:groupmode="layer" id="layer8" inkscape:label="Hangneigung" style="display:inline">
+              <path class="rare" d="m 164.02758,11.198424 0.0413,16.078976 6.65257,-14.490611 c -1.83159,-0.818727 -3.80484,-1.534933 -6.69392,-1.588365 z" id="HN_100"/>
+              <path class="rare" d="m 164.06886,27.277294 9.73702,-12.530666 c -0.74874,-0.661208 -1.80536,-1.316708 -3.08438,-1.959839 z" id="HN_75-100"/>
+              <path id="HN_50-75" class="rare" d="m 176.30354,17.244285 -12.23469,10.033 9.73702,-12.530667 c 0.9919,0.75375 1.80223,1.604953 2.49767,2.497667 z"/>
+              <path id="HN_25-50" class="rare" d="m 178.25095,20.334653 -14.18202,6.942667 12.23469,-10.033 c 0.67225,0.765788 1.3224,1.734909 1.94733,3.090333 z"/>
+              <path id="HN_10-25" class="rare" d="m 179.43632,23.594354 -15.36735,3.683 14.18202,-6.942667 c 0.53822,0.950874 0.93073,2.109404 1.18533,3.259667 z"/>
+              <path id="HN_0-10" class="rare" d="m 164.06893,27.277391 15.36735,-3.683 c 0.33212,1.176936 0.47466,2.578365 0.42334,3.683 z"/>
+              <text style="font-size:3.98667px" x="163.05309" y="6.1399994" id="text2536"><tspan class="de">Hangneigung</tspan><tspan class="fr">Pente</tspan></text>
+              <text style="font-size:2.14667px" x="168.80565" y="10.841761" id="text2538">100%</text>
+              <text style="font-size:2.14667px" x="174.03191" y="13.629383" id="text2540">75%</text>
+              <text style="font-size:2.14667px" x="177.41148" y="16.628279" id="text2542">50%</text>
+              <text style="font-size:2.14667px" x="179.64407" y="20.135595" id="text2544">25%</text>
+              <text style="font-size:2.14667px" x="180.77878" y="23.819725" id="text2546">10%</text>
+              <path d="M 164.02758,27.320016 V 11.198425 c 8.74466,0.142169 15.87112,7.343775 15.87112,16.121944 z" style="fill:none;stroke:#231f20;stroke-width:0.152753" id="path1732"/>
+              <path d="M 173.16558,15.581124 174.3996,14.00703" style="fill:none;stroke:#231f20;stroke-width:0.0765528" id="path1736"/>
+              <path d="m 171.11757,11.922183 -0.86501,1.864078" style="fill:none;stroke:#231f20;stroke-width:0.0765528" id="path1742"/>
+              <path d="m 175.56927,17.88187 1.57162,-1.287639" style="fill:none;stroke:#231f20;stroke-width:0.0765528" id="path1748"/>
+              <path d="m 179.26465,19.876087 -1.83021,0.89535" style="fill:none;stroke:#231f20;stroke-width:0.0765528" id="path1754"/>
+              <path d="m 180.50029,23.389719 -1.95827,0.468136" style="fill:none;stroke:#231f20;stroke-width:0.0765528" id="path1760"/>
+            </g>
+            <g inkscape:groupmode="layer" id="layer6" inkscape:label="Hoehenlage" style="display:inline">
+              <rect class="rare" id="HL_S_500" width="3.9499402" height="0.84823698" x="144.93478" y="48.989044"/>
+              <rect class="rare" id="HL_N_400" width="3.9732296" height="0.82176" x="136.99048" y="50.68552"/>
+              <rect class="rare" id="HL_S_300" width="3.9499402" height="0.80361199" x="144.93478" y="52.329041"/>
+              <rect class="rare" id="HL_EW_500" width="3.9710801" height="0.8482365" x="140.96371" y="48.989044"/>
+              <rect class="rare" id="HL_N_450" width="3.9732358" height="0.8482399" x="136.99048" y="49.83728"/>
+              <rect class="rare" id="HL_N_500" width="3.9732296" height="0.84823799" x="136.99048" y="48.989044"/>
+              <rect class="rare" id="HL_EW_450" width="3.9710827" height="0.848239" x="140.9637" y="49.83728"/>
+              <rect class="rare" id="HL_S_450" width="3.9499292" height="0.84823835" x="144.9348" y="49.83728"/>
+              <rect class="rare" id="HL_EW_400" width="3.9710674" height="0.82175976" x="140.96371" y="50.685516"/>
+              <rect class="rare" id="HL_S_400" width="3.9499466" height="0.82175601" x="144.93478" y="50.685516"/>
+              <rect class="rare" id="HL_S_350" width="3.9499512" height="0.82176971" x="144.93478" y="51.507271"/>
+              <rect class="rare" id="HL_EW_350" width="3.9710691" height="0.82176208" x="140.96371" y="51.507278"/>
+              <rect class="rare" id="HL_N_350" width="3.9732296" height="0.82175845" x="136.99048" y="51.507278"/>
+              <rect class="rare" id="HL_EW_300" width="3.9710801" height="0.80361384" x="140.96371" y="52.329037"/>
+              <rect class="rare" id="HL_N_300" width="3.9732337" height="0.8036136" x="136.99048" y="52.329037"/>
+              <rect class="rare" id="HL_N_250" width="3.9732296" height="0.80361229" x="136.99048" y="53.132648"/>
+              <rect class="rare" id="HL_EW_250" width="3.9710732" height="0.80361211" x="140.96371" y="53.132648"/>
+              <rect class="rare" id="HL_S_250" width="3.9499292" height="0.80361032" x="144.9348" y="53.132652"/>
+              <rect class="rare" id="HL_N_800" width="3.9732296" height="0.84823698" x="136.99048" y="43.989021"/>
+              <rect class="rare" id="HL_S_700" width="3.9499402" height="0.82177848" x="144.93478" y="45.685493"/>
+              <rect class="rare" id="HL_N_600" width="3.9732296" height="0.82999653" x="136.99048" y="47.329052"/>
+              <rect class="rare" id="HL_EW_800" width="3.9710763" height="0.84823668" x="140.96371" y="43.989021"/>
+              <rect class="rare" id="HL_S_800" width="3.9499402" height="0.84823728" x="144.9348" y="43.989021"/>
+              <rect class="rare" id="HL_S_750" width="3.9499466" height="0.84823489" x="144.93478" y="44.837257"/>
+              <rect class="rare" id="HL_EW_750" width="3.9710691" height="0.84823608" x="140.96371" y="44.837257"/>
+              <rect class="rare" id="HL_N_750" width="3.9732296" height="0.84823638" x="136.99048" y="44.837257"/>
+              <rect class="rare" id="HL_EW_700" width="3.9710801" height="0.82177728" x="140.96371" y="45.685493"/>
+              <rect class="rare" id="HL_N_700" width="3.9732337" height="0.82177615" x="136.99048" y="45.685493"/>
+              <rect class="rare" id="HL_N_650" width="3.9732323" height="0.82178235" x="136.99048" y="46.507271"/>
+              <rect class="rare" id="HL_EW_650" width="3.9710801" height="0.82178205" x="140.96371" y="46.507271"/>
+              <rect class="rare" id="HL_S_650" width="3.9499292" height="0.82178205" x="144.9348" y="46.507271"/>
+              <rect class="rare" id="HL_EW_600" width="3.9710763" height="0.82999712" x="140.96371" y="47.329052"/>
+              <rect class="rare" id="HL_S_600" width="3.9499376" height="0.82999742" x="144.9348" y="47.329048"/>
+              <rect class="rare" id="HL_S_550" width="3.9499402" height="0.82999861" x="144.9348" y="48.159042"/>
+              <rect class="rare" id="HL_EW_550" width="3.9710691" height="0.8299942" x="140.96371" y="48.159046"/>
+              <rect class="rare" id="HL_N_550" width="3.9732296" height="0.82999611" x="136.99048" y="48.159046"/>
+              <rect class="rare" id="HL_N_1100" width="3.9732299" height="0.82999802" x="136.99048" y="38.989029"/>
+              <rect class="rare" id="HL_EW_1100" width="3.9710691" height="0.82999802" x="140.96371" y="38.989029"/>
+              <rect class="rare" id="HL_N_1050" width="3.9732296" height="0.86647773" x="136.99048" y="39.819027"/>
+              <rect class="rare" id="HL_S_1050" width="3.9499402" height="0.87201625" x="144.9348" y="39.813488"/>
+              <rect class="rare" id="HL_S_1100" width="3.9499559" height="0.82445908" x="144.93477" y="38.989029"/>
+              <rect class="rare" id="HL_EW_1050" width="3.9710763" height="0.86647773" x="140.96371" y="39.819027"/>
+              <rect class="rare" id="HL_N_1000" width="3.9732323" height="0.82177848" x="136.99048" y="40.685505"/>
+              <rect class="rare" id="HL_S_900" width="3.9499402" height="0.82997954" x="144.93478" y="42.329063"/>
+              <rect class="rare" id="HL_EW_1000" width="3.9710763" height="0.82177758" x="140.96371" y="40.685505"/>
+              <rect class="rare" id="HL_S_1000" width="3.9499402" height="0.82177782" x="144.9348" y="40.685505"/>
+              <rect class="rare" id="HL_S_950" width="3.9499402" height="0.82178068" x="144.9348" y="41.507282"/>
+              <rect class="rare" id="HL_EW_950" width="3.9710691" height="0.82178116" x="140.96371" y="41.507282"/>
+              <rect class="rare" id="HL_N_950" width="3.9732296" height="0.82177824" x="136.99048" y="41.507282"/>
+              <rect class="rare" id="HL_EW_900" width="3.9710801" height="0.82998133" x="140.96371" y="42.329063"/>
+              <rect class="rare" id="HL_N_900" width="3.9732337" height="0.82998449" x="136.99048" y="42.329063"/>
+              <rect class="rare" id="HL_N_850" width="3.9732296" height="0.82997268" x="136.99048" y="43.159046"/>
+              <rect class="rare" id="HL_EW_850" width="3.9710827" height="0.82997268" x="140.9637" y="43.159046"/>
+              <rect class="rare" id="HL_S_850" width="3.9499292" height="0.82997829" x="144.9348" y="43.159042"/>
+              <rect class="rare" id="HL_N_1400" width="3.9732296" height="0.84823698" x="136.99048" y="33.98904"/>
+              <rect class="rare" id="HL_S_1300" width="3.9499402" height="0.82176" x="144.93478" y="35.685516"/>
+              <rect class="rare" id="HL_N_1200" width="3.9732296" height="0.82999802" x="136.99048" y="37.329033"/>
+              <rect class="rare" id="HL_N_1350" width="3.9732296" height="0.84823728" x="136.99048" y="34.837276"/>
+              <rect class="rare" id="HL_EW_1400" width="3.9710763" height="0.84823585" x="140.96371" y="33.98904"/>
+              <rect class="rare" id="HL_EW_1350" width="3.9710691" height="0.8482399" x="140.96371" y="34.837276"/>
+              <rect class="rare" id="HL_S_1350" width="3.9499402" height="0.84823841" x="144.9348" y="34.837276"/>
+              <rect class="rare" id="HL_S_1400" width="3.9499402" height="0.84823555" x="144.9348" y="33.98904"/>
+              <rect class="rare" id="HL_EW_1300" width="3.9710763" height="0.82176167" x="140.96371" y="35.685513"/>
+              <rect class="rare" id="HL_N_1300" width="3.9732337" height="0.82176089" x="136.99048" y="35.685513"/>
+              <rect class="rare" id="HL_N_1250" width="3.9732296" height="0.82176119" x="136.99048" y="36.507271"/>
+              <rect class="rare" id="HL_EW_1250" width="3.9710827" height="0.82176119" x="140.9637" y="36.507271"/>
+              <rect class="rare" id="HL_S_1250" width="3.9499292" height="0.82176" x="144.9348" y="36.507275"/>
+              <rect class="rare" id="HL_N_1150" width="3.9732358" height="0.82999802" x="136.99048" y="38.159031"/>
+              <rect class="rare" id="HL_EW_1200" width="3.9710827" height="0.82999623" x="140.9637" y="37.329033"/>
+              <rect class="rare" id="HL_S_1150" width="3.9499466" height="0.82999974" x="144.93478" y="38.159031"/>
+              <rect class="rare" id="HL_S_1200" width="3.949944" height="0.82999623" x="144.9348" y="37.329033"/>
+              <rect class="rare" id="HL_EW_1150" width="3.9710758" height="0.82999802" x="140.9637" y="38.159031"/>
+              <rect class="rare" id="HL_S_1700" width="3.9499402" height="0.83500648" x="144.93478" y="28.989052"/>
+              <rect class="rare" id="HL_N_1600" width="3.9732296" height="0.82999802" x="136.99048" y="30.659065"/>
+              <rect class="rare" id="HL_S_1500" width="3.9499402" height="0.83498949" x="144.93478" y="32.319061"/>
+              <rect class="rare" id="HL_EW_1700" width="3.9710801" height="0.83500564" x="140.96371" y="28.989052"/>
+              <rect class="rare" id="HL_N_1650" width="3.9732358" height="0.83500713" x="136.99048" y="29.824059"/>
+              <rect class="rare" id="HL_N_1700" width="3.9732296" height="0.83500588" x="136.99048" y="28.989052"/>
+              <rect class="rare" id="HL_EW_1650" width="3.9710801" height="0.83500713" x="140.96371" y="29.824059"/>
+              <rect class="rare" id="HL_S_1650" width="3.9499292" height="0.83500713" x="144.9348" y="29.824059"/>7
+              <rect class="rare" id="HL_EW_1600" width="3.9710763" height="0.8299976" x="140.96371" y="30.659065"/>
+              <rect class="rare" id="HL_S_1600" width="3.9499376" height="0.82999718" x="144.9348" y="30.659065"/>
+              <rect class="rare" id="HL_EW_1550" width="3.9710801" height="0.82999879" x="140.96371" y="31.489063"/>
+              <rect class="rare" id="HL_N_1550" width="3.9732296" height="0.82999837" x="136.99048" y="31.489063"/>
+              <rect class="rare" id="HL_S_1550" width="3.9499362" height="0.82999921" x="144.9348" y="31.489063"/>
+              <rect class="rare" id="HL_EW_1450" width="3.9710801" height="0.83498985" x="140.96371" y="33.154049"/>
+              <rect class="rare" id="HL_EW_1500" width="3.9710763" height="0.83498913" x="140.96371" y="32.319061"/>
+              <rect class="rare" id="HL_N_1500" width="3.9732337" height="0.83498728" x="136.99048" y="32.319061"/>
+              <rect class="rare" id="HL_N_1450" width="3.973227" height="0.83499211" x="136.99048" y="33.154045"/>
+              <rect class="rare" id="HL_S_1450" width="3.9499402" height="0.83499169" x="144.9348" y="33.154049"/>
+              <rect class="rare" id="HL_N_2000" width="3.9732296" height="0.8326785" x="136.99048" y="23.989063"/>
+              <rect class="rare" id="HL_S_1900" width="3.9499402" height="0.82999748" x="144.93478" y="25.654419"/>
+              <rect class="rare" id="HL_N_1800" width="3.9732296" height="0.83731896" x="136.99048" y="27.314415"/>
+              <rect class="rare" id="HL_EW_2000" width="3.9710763" height="0.83268034" x="140.96371" y="23.989061"/>
+              <rect class="rare" id="HL_S_1950" width="3.9499331" height="0.83267796" x="144.9348" y="24.821739"/>
+              <rect class="rare" id="HL_EW_1900" width="3.9710801" height="0.82999676" x="140.96371" y="25.654419"/>
+              <rect class="rare" id="HL_N_1950" width="3.9732337" height="0.83267719" x="136.99048" y="24.821739"/>
+              <rect class="rare" id="HL_S_2000" width="3.9499402" height="0.83267653" x="144.9348" y="23.989061"/>
+              <rect class="rare" id="HL_EW_1950" width="3.9710758" height="0.83267975" x="140.9637" y="24.821735"/>
+              <rect class="rare" id="HL_N_1900" width="3.9732337" height="0.8299973" x="136.99048" y="25.654419"/>
+              <rect class="rare" id="HL_N_1850" width="3.9732296" height="0.82999837" x="136.99048" y="26.484413"/>
+              <rect class="rare" id="HL_EW_1850" width="3.9710827" height="0.82999837" x="140.9637" y="26.484413"/>
+              <rect class="rare" id="HL_S_1850" width="3.9499292" height="0.82999766" x="144.9348" y="26.484413"/>
+              <rect class="rare" id="HL_EW_1800" width="3.9710763" height="0.83731872" x="140.96371" y="27.314415"/>
+              <rect class="rare" id="HL_S_1800" width="3.9499402" height="0.83731902" x="144.9348" y="27.314415"/>
+              <rect class="rare" id="HL_EW_1750" width="3.9710691" height="0.83731842" x="140.96371" y="28.151733"/>
+              <rect class="rare" id="HL_S_1750" width="3.9499466" height="0.83731782" x="144.93478" y="28.151733"/>
+              <rect class="rare" id="HL_N_1750" width="3.9732296" height="0.83731872" x="136.99048" y="28.151733"/>
+              <rect class="rare" id="HL_N_2300" width="3.9732296" height="0.833" x="136.99048" y="19.041952"/>
+              <rect class="rare" id="HL_EW_2250" width="3.9710763" height="0.8270303" x="140.96371" y="19.874952"/>
+              <rect class="rare" id="HL_S_2300" width="3.9499402" height="0.83299965" x="144.9348" y="19.041952"/>
+              <rect class="rare" id="HL_N_2200" width="3.9732296" height="0.833" x="136.99048" y="20.701982"/>
+              <rect class="rare" id="HL_S_2100" width="3.9499402" height="0.81354201" x="144.93478" y="22.361979"/>
+              <rect class="rare" id="HL_EW_2300" width="3.9710827" height="0.83299965" x="140.9637" y="19.041952"/>
+              <rect class="rare" id="HL_S_2250" width="3.9499402" height="0.82703084" x="144.9348" y="19.874952"/>
+              <rect class="rare" id="HL_N_2250" width="3.973227" height="0.82703054" x="136.99048" y="19.874952"/>
+              <rect class="rare" id="HL_EW_2200" width="3.9710846" height="0.833" x="140.96371" y="20.701982"/>
+              <rect class="rare" id="HL_S_2150" width="3.9499402" height="0.82699615" x="144.9348" y="21.534981"/>
+              <rect class="rare" id="HL_EW_2050" width="3.9710732" height="0.81354266" x="140.96371" y="23.175518"/>
+              <rect class="rare" id="HL_EW_2100" width="3.9710767" height="0.81354189" x="140.96371" y="22.361977"/>
+              <rect class="rare" id="HL_N_2150" width="3.9732296" height="0.82699615" x="136.99048" y="21.534981"/>
+              <rect class="rare" id="HL_N_2050" width="3.9732358" height="0.81354517" x="136.99048" y="23.175518"/>
+              <rect class="rare" id="HL_S_2050" width="3.9499292" height="0.81354266" x="144.9348" y="23.175518"/>
+              <rect class="rare" id="HL_S_2200" width="3.9499402" height="0.83299983" x="144.9348" y="20.701982"/>
+              <rect class="rare" id="HL_EW_2150" width="3.9710691" height="0.82699579" x="140.96371" y="21.534981"/>
+              <rect class="rare" id="HL_N_2100" width="3.9732337" height="0.81353939" x="136.99048" y="22.361977"/>
+              <path d="m 144.93467,19.041938 v 34.94722" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2584"/>
+              <path id="path2586" style="fill:none;stroke:#231f20;stroke-width:0.105833" d="m 136.99036,53.936248 h 11.89425 v -34.89431 h -11.89425 z"/>
+              <path d="M 140.96359,19.041972 V 53.936278" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2740"/>
+              <path d="m 136.98757,20.701968 h 11.8999" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2952"/>
+              <path d="m 136.98757,22.361964 h 11.8999" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2956"/>
+              <path d="m 136.98757,25.654405 h 11.8999" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2960"/>
+              <path d="m 136.98757,27.3144 h 11.8999" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2964"/>
+              <path d="m 136.98757,30.659051 h 11.8999" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2968"/>
+              <path d="m 136.98757,32.319047 h 11.8999" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2972"/>
+              <path d="m 136.98757,35.6855 h 11.8999" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2976"/>
+              <path d="m 136.98757,37.32902 h 11.8999" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2980"/>
+              <path d="m 136.98757,40.68549 h 11.8999" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2984"/>
+              <path d="m 136.98757,42.329047 h 11.8999" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2988"/>
+              <path d="m 136.98757,45.68548 h 11.8999" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2992"/>
+              <path d="m 136.98757,47.329037 h 11.8999" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2996"/>
+              <path d="m 136.98757,50.685504 h 11.8999" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path3000"/>
+              <path d="m 136.98757,52.329024 h 11.8999" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path3004"/>
+              <text style="font-size:3.98667px" x="128.95625" y="6.1399994" id="text2702"><tspan class="de">Höhenlage</tspan><tspan class="fr">Altitude</fr></text>
+              <text style="font-size:2.14667px;text-align:end;text-anchor:end" x="135.08292" y="12.342165" id="text2708"><tspan class="de" id="tspan702">Meter</tspan><tspan class="fr" id="tspan704">(m)</tspan></text>
+              <text style="font-size:2.14667px;text-align:end;text-anchor:end" x="135.08292" y="15.390171" class="de" id="text2710">ü. M.</text>
+              <text style="font-size:2.54px" x="138.78256" y="12.292919" id="text2716"><tspan class="de" id="tspan2712">Hanglage</tspan><tspan class="fr" id="tspan2714">versant</tspan></text>
+              <text style="font-size:2.14667px" x="137.95511" y="16.561396" id="text2722"><tspan class="de" id="tspan2718">N E&amp;W S</tspan><tspan class="fr" id="tspan2720">N E&amp;O S</tspan></text>
+              <path d="M 148.93757,48.98903 H 135.93771" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2590"/>
+              <path d="M 148.93757,43.989006 H 135.93771" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2594"/>
+              <path d="M 148.93757,38.989016 H 135.93771" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2598"/>
+              <path d="M 148.93757,33.989026 H 135.93771" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2602"/>
+              <path d="M 148.93757,28.989038 H 135.93771" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2606"/>
+              <path d="M 148.93757,23.989048 H 135.93771" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2610"/>
+              <text style="font-size:2.14667px;text-align:end;text-anchor:end" x="135.08292" y="19.31246" id="text2730">2300</text>
+              <text style="font-size:2.14667px;text-align:end;text-anchor:end" x="135.08292" y="24.321905" id="text2732">2000</text>
+              <text style="font-size:2.14667px;text-align:end;text-anchor:end" x="135.08292" y="29.331348" id="text2734">1700</text>
+              <text style="font-size:2.14667px;text-align:end;text-anchor:end" x="135.08292" y="34.340794" id="text2736">1400</text>
+              <text style="font-size:2.14667px;text-align:end;text-anchor:end" x="135.08292" y="39.350277" id="text2738">1100</text>
+              <text style="font-size:2.14667px;text-align:end;text-anchor:end" x="135.08292" y="44.359684" id="text2740">800</text>
+              <text style="font-size:2.14667px;text-align:end;text-anchor:end" x="135.08292" y="49.369129" id="text2742">500</text>
+              <text style="font-size:2.14667px;text-align:end;text-anchor:end" x="135.08292" y="54.378567" id="text2744">200</text>
+              <path d="m 135.93756,19.041938 h 1.00012" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2646"/>
+              <path d="m 135.93756,53.936108 h 1.00012" style="fill:none;stroke:#231f20;stroke-width:0.105833" id="path2650"/>
+            </g>
+            <g inkscape:groupmode="layer" id="layer1" inkscape:label="Hoehenstufe_Region" style="display:inline">
+              <path class="rare" d="m 85.42637,25.834985 5.826397,0.919018 -5.826397,-2.833534 z" id="HS_OSA-4"/>
+              <path class="rare" d="m 75.245857,26.24818 5.830645,-1.099315 4.349868,0.68612 v -1.914516 l -5.312993,-2.575749 -4.86752,3.803903 z" id="HS_OSA-3"/>
+              <path class="rare" d="M 73.416973,26.577873 75.245857,26.24818 V 25.148623 Z" id="HS_OSA-2b"/>
+              <path class="rare" d="m 101.02291,32.712242 3.30532,0.372308 -3.30532,-1.602849 z" id="HS_SA-5b"/>
+              <path class="rare" d="m 92.893371,31.787509 8.129539,0.924733 v -1.230541 l -8.117411,-3.935335 z" id="HS_SA-5a"/>
+              <path class="rare" d="m 85.426365,30.940534 7.479128,0.84835 v -4.242518 l -1.652731,-0.792364 -5.826397,-0.919017 z" id="HS_SA-4"/>
+              <path class="rare" d="m 75.245861,31.222498 5.873809,-0.770468 4.306704,0.488504 v -5.105549 l -4.349868,-0.68612 -5.830645,1.099315 z" id="HS_SA-3"/>
+              <path class="rare" d="m 68.604878,31.222498 h 6.640976 V 26.24818 l -6.640976,1.197168 z" id="HS_SA-2b"/>
+              <path class="rare" d="m 61.942816,28.625213 v 2.597285 h 6.662058 v -3.77715 z" id="HS_SA-2a"/>
+              <path class="rare" d="m 47.277382,31.222498 h 14.66544 v -2.597285 z" id="HS_SA-1"/>
+              <path class="rare" d="m 92.89337,31.787504 -2e-5,6.316488 8.12956,-5.39175 z" id="HS_HM-5a"/>
+              <path class="rare" d="m 85.426373,30.940534 0.006,8.349497 7.461,-1.186039 v -6.316488 z" id="HS_HM-4"/>
+              <path class="rare" d="M 85.42637,43.224763 V 30.940535 l -4.306704,-0.488504 -5.873807,0.770437 8.3e-5,12.258692 5.226633,-4.079888 z" id="HS_HM-3"/>
+              <path class="rare" d="m 68.604881,31.222498 0.0068,12.546003 2.013148,0.08769 4.621094,-6.967357 v -5.666352 z" id="HS_HM-2b"/>
+              <path class="rare" d="m 61.942823,31.222498 -0.0071,3.643736 6.669158,-2.053167 v -1.590569 z" id="HS_HM-2a"/>
+              <path class="rare" d="m 47.015887,32.861749 14.919885,2.004484 0.01208,-3.643735 H 47.277383 l -2.504966,2.424887 z" id="HS_HM-1"/>
+              <path class="rare" d="m 92.893028,38.104042 0.0063,1.169378 8.124322,-2.33183 v -4.231873 z" id="HS_UMOM-5a"/>
+              <path class="rare" d="m 101.02291,32.712242 3.30646,0.372437 4.18665,2.021054 -0.0287,1.757186 -7.46065,2.333653 z" id="HS_UMOM-5b"/>
+              <path class="rare" d="m 47.015888,32.861749 0.01327,3.760224 14.886244,2.291154 0.02036,-4.046893 z" id="HS_OM-1"/>
+              <path class="rare" d="m 61.935771,34.866234 -0.02038,4.046891 6.691784,-1.80326 -0.0022,-4.296798 z" id="HS_OM-2a"/>
+              <path class="rare" d="m 61.927357,45.713933 4.340482,-1.284467 1.166167,-2.469543 -5.508691,2.195689 z" id="HS_SM-2a"/>
+              <path class="rare" d="m 108.48731,36.862919 0.0118,11.822784 -7.47545,0.0063 0.003,-9.49543 z" id="HS_C-5b"/>
+              <path class="rare" d="m 101.02367,36.94159 v 11.750385 l -8.130642,0.0068 0.0063,-9.425349 z" id="HS_C-5a"/>
+              <path class="rare" d="m 92.89303,38.104042 v 10.594757 h -0.374329 l -7.092331,-5.474037 0.006,-3.934731 z" id="HS_C-4"/>
+              <path class="rare" d="m 68.6117,43.768501 2.013149,0.08769 4.621093,-6.96736 v 6.592359 l -6.623788,5.203808 z" id="HS_C-2b"/>
+              <path class="rare" d="m 61.927355,48.685002 h 6.694799 l -0.01723,-8.103485 -1.170928,1.378407 -1.166167,2.469542 -4.340481,1.284467 z" id="HS_C-2a"/>
+              <path class="rare" d="m 61.927357,45.713928 v 2.971074 H 47.05472 l -0.0012,-2.973868 z" id="HS_C-1"/>
+              <path class="rare" d="m 61.925258,44.155618 0.0021,1.558316 -14.873737,-0.0028 -0.01087,-3.926541 z" id="HS_SM-1"/>
+              <path class="rare" d="m 39.731056,38.436603 7.298104,-1.81463 -0.01327,-3.760224 -2.243475,0.785636 z" id="HS_OM-M"/>
+              <path class="rare" d="m 47.054719,45.711134 v 2.973868 H 30.591798 l -1.8e-4,-1.499575 1.541465,-1.474293 z" id="HS_C-M"/>
+              <path class="rare" d="m 47.042751,41.784593 0.01197,3.926541 H 32.133084 l 1.837868,-1.73826 z" id="HS_SM-M"/>
+              <path class="rare" d="m 30.591799,47.185691 v 1.499311 H 14.885711 l 0.0084,-2.984087 14.691029,0.0074 z" id="HS_C-J"/>
+              <path class="rare" d="m 15.70965,43.604562 -0.81549,2.096357 14.69103,0.0074 -2.902469,-4.28818 z" id="HS_SM-J"/>
+              <path class="rare" d="m 19.321298,34.320492 1.826708,-1.094147 -0.881053,-1.336744 z" id="HS_HM-J"/>
+              <path class="rare" d="m 17.590017,38.817565 6.147984,-1.779561 -2.589995,-3.811659 -1.826666,1.094039 z" id="HS_OM-J"/>
+              <path id="HS_UM-J" class="rare" d="m 17.590017,38.817566 6.147984,-1.779562 2.94472,4.382135 -10.973071,2.184423 z"/>
+              <path id="HS_UM-1" class="rare" d="m 61.916315,38.913265 0.009,5.242348 -14.882564,-2.37102 -0.01359,-5.16262 z"/>
+              <path id="HS_UM-M" class="rare" d="m 47.042751,41.784593 -13.071799,2.188281 5.760104,-5.536271 7.298104,-1.81463 z"/>
+              <path id="HS_UM-2a" class="rare" d="m 61.925315,44.155613 -0.009,-5.242348 0.124771,-0.01096 6.566089,-1.79244 -0.0022,3.477498 -1.170959,1.372561 -2.932745,1.168953 z"/>
+              <path class="rare" d="m 75.099347,37.109865 h -6.492172 l 0.0045,6.658636 2.013128,0.08769 z" id="HS_HMspez-2b"/>
+              <rect class="rare" id="HS_HM-2b-spez53" width="6.640976" height="1.590569" x="68.604874" y="31.222511"/>
+              <text style="font-size:3.98667px" x="9.1458921" y="6.1399994" id="text2794"><tspan class="de">Höhenstufe / Region</tspan><tspan class="fr">Etage de végétation / Région</tspan></text>
+              <text style="font-size:2.14667px;text-align:end;text-anchor:end" x="13.773439" y="16.878149" id="text2800"><tspan class="de" id="tspan775">Meter</tspan><tspan class="fr" id="tspan777">(m)</tspan></text>
+              <text style="font-size:2.14667px;text-align:end;text-anchor:end" class="de" y="19.418001" x="13.83236" id="text2802">ü. M.</text>
+              <text style="font-size:2.14667px;text-align:end;text-anchor:end" y="26.298904" x="13.723823" id="text2804">2000</text>
+              <text style="font-size:2.14667px;text-align:end;text-anchor:end" y="31.946411" x="13.723823" id="text2806">1600</text>
+              <text style="font-size:2.14667px;text-align:end;text-anchor:end" y="41.109428" x="13.723823" id="text2808">800</text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" y="17.840015" x="22.807142" id="text2810">J</text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" y="17.840015" x="38.808167" id="text2812">M</text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" y="17.840015" x="54.453819" id="text2814">1</text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" y="17.840015" x="68.594864" id="text2816">2</text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" y="17.840015" x="80.342941" id="text2818">3</text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" y="17.840015" x="89.167213" id="text2820">4</text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" y="17.840015" x="100.89888" id="text2822">5</text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" x="65.220337" y="19.91357" id="text2824">2a</text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" x="71.916977" y="19.91357" id="text2826">2b</text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" x="96.915642" y="19.91357" id="text2828">5a</text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" x="104.76365" y="19.91357" id="text2830">5b</text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" y="11.166852" x="22.727921" id="tspan2832"><tspan class="de">Jura</tspan><tspan class="fr">Jura</tspan></text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" y="11.263559" x="38.788754" id="tspan2834"><tspan class="de">Mittelland</tspan><tspan class="fr">Plateau</tspan></text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" y="10.601654" x="54.492119" id="tspan2836"><tspan class="de">Nördl.</tspan><tspan class="fr">Alpes externes</tspan></text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" y="13.103132" x="54.46484" id="tspan2838"><tspan class="de">Randalpen</tspan><tspan class="fr">du Nord</tspan></text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" y="9.086586" x="68.603783" id="tspan2840"><tspan class="de">Nördl.</tspan><tspan class="fr">Alpes inter-</tspan></text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" y="11.58806" x="68.609032" id="tspan2842"><tspan class="de">Zwischen-</tspan><tspan class="fr">médiaires</tspan>-</text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" y="14.089538" x="68.618996" id="tspan2844"><tspan class="de">alpen</tspan><tspan class="fr">du Nord</tspan></text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" y="9.086586" x="80.345566" id="tspan2846"><tspan class="de">Kontinent.</tspan><tspan class="fr">Hautes</tspan></text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" y="11.58806" x="80.296776" id="tspan2848"><tspan class="de">Hoch-</tspan><tspan class="fr">Alpen</tspan></text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" y="14.089538" x="80.360779" id="tspan2850"><tspan class="de">alpen</tspan><tspan class="fr">continent.</tspan></text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" y="9.086586" x="89.208664" id="tspan2852"><tspan class="de">Südl.</tspan><tspan class="fr">Alpes</tspan></text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" y="11.58806" x="89.174561" id="tspan2854"><tspan class="de">Zwischen-</tspan><tspan class="fr">interméd.</tspan></text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" y="14.089538" x="89.184532" id="tspan2856"><tspan class="de">alpen</tspan><tspan class="fr">du Sud</tspan></text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" y="10.601654" x="100.74505" id="tspan2858"><tspan class="de">Südl.</tspan><tspan class="fr">Alpes externes</tspan></text>
+              <text style="font-size:2.14667px;text-align:center;text-anchor:middle" y="13.103132" x="100.67841" id="tspan2860"><tspan class="de">Randalpen</tspan><tspan class="fr">du Sud</tspan></text>
+              <text id="text3082" style="font-size:2.14667px;stroke-width:0.352778" x="15.258379" y="52.616104"><tspan class="de">OSA</tspan><tspan class="fr">SS</tspan></text>
+              <text id="text3086" style="font-size:2.14667px;stroke-width:0.352778" x="15.258379" y="55.836121"><tspan class="de">SA</tspan><tspan class="fr">SA</tspan></text>
+              <text id="text3090" style="font-size:2.14667px;stroke-width:0.352778" x="40.846642" y="52.616104"><tspan class="de">HM</tspan><tspan class="fr">HM</tspan></text>
+              <text id="text3094" style="font-size:2.14667px;stroke-width:0.352778" x="40.846642" y="55.836121"><tspan class="de">OM</tspan><tspan class="fr">MS</tspan></text>
+              <text id="text3098" style="font-size:2.14667px;stroke-width:0.352778" x="69.129131" y="52.616104"><tspan class="de">UM</tspan><tspan class="fr">MI</tspan></text>
+              <text id="text3102" style="font-size:2.14667px;stroke-width:0.352778" x="69.129131" y="55.836121"><tspan class="de">SM</tspan><tspan class="fr">SM</tspan></text>
+              <text id="text3106" style="font-size:2.14667px;stroke-width:0.352778" x="96.629959" y="52.616104"><tspan class="de">C</tspan><tspan class="fr">C</tspan></text>
+              <text style="font-size:2.14667px" y="52.616104" x="20.547829" id="tspan2864"><tspan class="de">Obersubalpin</tspan><tspan class="fr">subalpin supérieur</tspan></text>
+              <text style="font-size:2.14667px" y="55.836121" x="20.547829" id="tspan2866"><tspan class="de">Subalpin</tspan><tspan class="fr">subalpin</tspan></text>
+              <text style="font-size:2.14667px" y="52.616104" x="45.846989" id="tspan2868"><tspan class="de">Hochmontan</tspan><tspan class="fr">haut-montagnard</tspan></text>
+              <text style="font-size:2.14667px" y="55.836121" x="45.846989" id="tspan2870"><tspan class="de">Obermontan</tspan><tspan class="fr">montagnard supérieur</tspan></text>
+              <text style="font-size:2.14667px" y="52.616104" x="74.04314" id="tspan2872"><tspan class="de">Untermontan</tspan><tspan class="fr">montagnard inférieur</tspan></text>
+              <text style="font-size:2.14667px" y="55.836121" x="74.04314" id="tspan2874"><tspan class="de">Submontan</tspan><tspan class="fr">submontagnard</tspan></text>
+              <text style="font-size:2.14667px" y="52.616104" x="99.928825" id="tspan2876"><tspan class="de">Collin</tspan><tspan class="fr">collinéen</tspan></text>
+              <text id="text3018" style="font-size:2.14667px;stroke-width:0.352778" x="80.041878" y="24.772266"><tspan class="de">OSA</tspan><tspan class="fr">SS</tspan></text>
+              <text id="text3022" style="font-size:2.14667px;stroke-width:0.352778" x="75.25528" y="29.68512"><tspan class="de">SA</tspan><tspan class="fr">SA</tspan></text>
+              <text id="text3078" style="font-size:2.14667px;stroke-width:0.352778" x="91.663925" y="29.68512"><tspan class="de">SA</tspan><tspan class="fr">SA</tspan></text>
+              <text id="text3026" style="font-size:2.14667px;stroke-width:0.352778" x="84.556053" y="34.998165"><tspan class="de">HM</tspan><tspan class="fr">HM</tspan></text>
+              <text id="text3030" style="font-size:2.14667px;stroke-width:0.352778" x="60.797283" y="33.240307"><tspan class="de">HM</tspan><tspan class="fr">HM</tspan></text>
+              <text id="text3034" style="font-size:2.14667px;stroke-width:0.352778" x="21.097395" y="32.958675"><tspan class="de">HM</tspan><tspan class="fr">HM</tspan></text>
+              <text id="text3038" style="font-size:2.14667px;stroke-width:0.352778" x="46.145084" y="35.251705"><tspan class="de">OM</tspan><tspan class="fr">MS</tspan></text>
+              <text id="text3042" style="font-size:2.14667px;stroke-width:0.352778" x="99.372017" y="35.539783"><tspan class="de">OM /</tspan><tspan class="fr">MS /</tspan></text>
+              <text id="text3046" style="font-size:2.14667px;stroke-width:0.352778" x="19.255747" y="36.895298"><tspan class="de">OM</tspan><tspan class="fr">MS</tspan></text>
+              <text id="text3050" style="font-size:2.14667px;stroke-width:0.352778" x="21.67625" y="39.993851"><tspan class="de">UM</tspan><tspan class="fr">MI</tspan></text>
+              <text id="text3054" style="font-size:2.14667px;stroke-width:0.352778" x="46.203293" y="39.594013"><tspan class="de">UM</tspan><tspan class="fr">MI</tspan></text>
+              <text id="text3118" style="font-size:2.14667px;stroke-width:0.352778" x="102.05225" y="37.272133"><tspan class="de">UM</tspan><tspan class="fr">MI</tspan></text>
+              <text id="text3058" style="font-size:2.14667px;stroke-width:0.352778" x="22.126492" y="44.590969"><tspan class="de">SM</tspan><tspan class="fr">SM</tspan></text>
+              <text id="text3062" style="font-size:2.14667px;stroke-width:0.352778" x="46.379997" y="44.29026"><tspan class="de">SM</tspan><tspan class="fr">SM</tspan></text>
+              <text id="text3114" style="font-size:2.14667px;stroke-width:0.352778" x="22.83769" y="47.66832"><tspan class="de">C</tspan><tspan class="fr">C</tspan></text>
+              <text id="text3066" style="font-size:2.14667px;stroke-width:0.352778" x="100.9411" y="44.29026"><tspan class="de">C</tspan><tspan class="fr">C</tspan></text>
+              <text id="text3070" style="font-size:2.14667px;stroke-width:0.352778" x="47.145737" y="47.685146"><tspan class="de">C</tspan><tspan class="fr">C</tspan></text>
+              <text id="text3074" style="font-size:2.14667px;stroke-width:0.352778" x="68.515007" y="46.481186"><tspan class="de">C</tspan><tspan class="fr">C</tspan></text>
+              <path id="path2794" style="fill:none;stroke:#231f20;stroke-width:0.105729" d="m 14.899161,15.093851 -0.005,30.43696"/>
+              <path id="path2800" style="fill:none;stroke:#231f20;stroke-width:0.105729" d="m 14.894161,48.740031 v -3.03918 l 5.372792,-13.81125 10.324845,15.296091 16.685582,-15.963194 26.114375,-4.624917 6.721623,-5.252861 28.380742,13.759039 0.005,13.581944 -15.980012,0.01341 -12.046532,-9.297811 -11.850422,9.2837 H 14.885711"/>
+              <path id="path2806" style="fill:none;stroke:#231f20;stroke-width:0.105729" d="m 19.303793,34.330893 1.844213,-1.104547"/>
+              <path id="path2812" style="fill:none;stroke:#231f20;stroke-width:0.105729" d="m 17.570557,38.819532 6.167444,-1.781528"/>
+              <path id="path2818" style="fill:none;stroke:#231f20;stroke-width:0.105729" d="M 15.697368,43.607008 26.682721,41.420139"/>
+              <path id="path2824" style="fill:none;stroke:#231f20;stroke-width:0.105729" d="m 14.89416,45.700921 14.691031,0.0074"/>
+              <path id="path2830" style="fill:none;stroke:#231f20;stroke-width:0.105729" d="m 73.391932,26.597722 7.684572,-1.448858 10.176264,1.605139"/>
+              <path id="path2836" style="fill:none;stroke:#231f20;stroke-width:0.105729" d="m 32.126669,45.708329 29.800689,0.0056 4.340483,-1.284463 1.1661,-2.469445 1.17103,-1.372658 -0.0046,3.180644 2.024479,0.08819 4.621094,-6.967361 v 6.592358"/>
+              <path id="path2842" style="fill:none;stroke:#231f20;stroke-width:0.105729" d="m 44.772412,33.647386 2.243475,-0.785636 14.919885,2.004483 6.669163,-2.053166 v 7.774163"/>
+              <path id="path2848" style="fill:none;stroke:#231f20;stroke-width:0.105729" d="m 39.744908,38.404207 7.284253,-1.782233 14.887141,2.291291 6.670219,-1.8034"/>
+              <path id="path2854" style="fill:none;stroke:#231f20;stroke-width:0.105729" d="m 33.970952,43.972874 13.071799,-2.188281 14.882564,2.37102 5.508697,-2.195689"/>
+              <path id="path2860" style="fill:none;stroke:#231f20;stroke-width:0.105729" d="M 104.33675,33.085517 81.119666,30.452031 75.24586,31.222498 H 47.277061"/>
+              <path id="path2866" style="fill:none;stroke:#231f20;stroke-width:0.105729" d="m 85.426348,43.240084 0.006,-3.950053 7.461,-1.186039 0.006,1.169459 8.124322,-2.331861 0.003,2.254955 7.46064,-2.333625"/>
+              <path id="path2872" style="fill:none;stroke:#231f20;stroke-width:0.105729" d="m 101.02291,32.712243 -8.129962,5.391855"/>
+              <path id="path2878" style="fill:none;stroke:#231f20;stroke-width:0.0704861" d="M 14.182107,25.571739 H 108.4644"/>
+              <path id="path2884" style="fill:none;stroke:#231f20;stroke-width:0.0704861" d="m 14.19619,31.220169 h 94.2823"/>
+              <path id="path2890" style="fill:none;stroke:#231f20;stroke-width:0.0704861" d="M 14.169713,40.407032 H 108.45201"/>
+              <path id="path2896" style="fill:none;stroke:#231f20;stroke-width:0.105729" d="M 30.59171,15.103129 V 46.954023"/>
+              <path id="path2902" style="fill:none;stroke:#231f20;stroke-width:0.105729" d="M 47.022525,15.09558 V 31.271852"/>
+              <path id="path2908" style="fill:none;stroke:#231f20;stroke-width:0.105729" d="M 61.94282,15.077129 V 28.510554"/>
+              <path id="path2914" style="fill:none;stroke:#231f20;stroke-width:0.105729" d="m 68.604875,18.561833 v 8.740069"/>
+              <path id="path2920" style="fill:none;stroke:#231f20;stroke-width:0.105729" d="m 75.245858,15.102282 v 9.89718"/>
+              <path id="path2926" style="fill:none;stroke:#231f20;stroke-width:0.105729" d="m 85.42637,15.066969 v 8.736189"/>
+              <path id="path2932" style="fill:none;stroke:#231f20;stroke-width:0.105729" d="M 92.893361,15.103658 V 27.381736"/>
+              <path id="path2938" style="fill:none;stroke:#231f20;stroke-width:0.105729" d="M 101.02291,18.522569 V 31.252555"/>
+              <path id="path2944" style="fill:none;stroke:#231f20;stroke-width:0.105729" d="M 108.49914,15.091946 V 35.105734"/>
+            </g>
+          </svg>
+          <br />
+        <div class="noScreen">
+            <img id="qr" />
+            <span id="version"></span>
+            <span id="date"></span>
+        </div>
+        <script type="text/javascript" src="WGinfo.js"></script>
+    </body>
+</html>

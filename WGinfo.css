@@ -1,0 +1,90 @@
+body {
+    background-color:rgb(245, 245, 245);
+    font-family: sans-serif;
+}
+.invisible {
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+  }
+h1 {
+    color:rgb(0, 0, 0);
+    text-align: center;
+}
+p{
+    color:rgb(0, 0, 0);
+    text-align: justify;
+}
+button {
+    height: 3em;
+    min-width: 3em;
+    border: 1px solid #767676;
+    border-radius: 4px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-color: #e2e2e2;
+}
+button:hover {
+background-color: #AAAAAA;
+cursor: pointer;
+}
+#share-mailto {
+background-image: url('data:image/svg+xml;utf8,<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope" class="svg-inline--fa fa-envelope fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>');
+}
+#print{
+background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg"><path d="M17,5 L3,5 C1.3,5 0,6.3 0,8 L0,14 L4,14 L4,18 L16,18 L16,14 L20,14 L20,8 C20,6.3 18.7,5 17,5 L17,5 Z M14,16 L6,16 L6,11 L14,11 L14,16 L14,16 Z M17,9 C16.4,9 16,8.6 16,8 C16,7.4 16.4,7 17,7 C17.6,7 18,7.4 18,8 C18,8.6 17.6,9 17,9 L17,9 Z M16,0 L4,0 L4,4 L16,4 L16,0 L16,0 Z" /></svg>');
+}
+#nav {
+font-weight: bold;
+float: right;
+vertical-align: 50%;
+}
+svg {
+display: inline !important;
+font-family: sans-serif;
+}
+#veryFrequent,
+.veryFrequent {
+fill: #74bd70;
+fill-opacity: 1;
+}
+.veryFrequent:hover {
+fill: #86d981;
+}
+#lessFrequent,
+.lessFrequent {
+fill: #b7ddae;
+fill-opacity: 1;
+}
+.lessFrequent:hover {
+fill: #d3fec8;
+}
+#rare,
+.rare {
+fill: #ddd;
+fill-opacity: 1;
+}
+.rare:hover {
+fill: #eee;
+}
+#HS_HMspez-2b.rare, 
+#HS_HM-2b-spez53.rare {
+/* special cases using overlay over #HS_HM-2b
+display only if !.rare */
+display: none !important;
+}
+@media screen
+{
+    .noPrint{}
+    .noScreen{display:none;}
+}
+@media print
+{
+    .noPrint{display:none;}
+    .noScreen{}
+}
+
+select{
+    height: 2em;
+};
